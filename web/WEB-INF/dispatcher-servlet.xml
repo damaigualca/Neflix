@@ -25,6 +25,11 @@
                  <prop key="index.htm">indexController</prop>
                  <prop key="catalog-page.htm">catalogo</prop>
                  <prop key="index1.htm">indexC</prop>
+                 <prop key="agregar.htm">indexC</prop>
+                 <prop key="/admin/socio/listaSocio.htm">listaSocio</prop>
+                 <prop key="/admin/socio/agregarSocio.htm">listaSocio</prop>
+                 <prop key="/admin/socio/editarSocio.htm">listaSocio</prop>
+                 <prop key="/admin/socio/eliminarSocio.htm">listaSocio</prop>
                  <prop key="product-page.htm">product-page</prop>
                  <prop key="login.htm">login</prop>
                  <prop key="registration.htm">registration</prop>
@@ -44,6 +49,9 @@
     -->
     <bean name="indexC"
           class="Controller.Controlador"
+          />
+    <bean name="listaSocio"
+          class="Controller.SocioController"
           />
     <bean name="indexController"
           class="org.springframework.web.servlet.mvc.ParameterizableViewController"

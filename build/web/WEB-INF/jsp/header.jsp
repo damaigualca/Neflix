@@ -7,6 +7,13 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+        <link rel="icon" type="image/png" sizes="25x25" href="assets/img/stickeroid_5bf5461d4e179-3.png">
+    <link rel="icon" type="image/png" sizes="35x35" href="assets/img/stickeroid_5bf5461d4e179-4.png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="assets/css/smoothproducts.css">
     </head>
     <body>
         <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
