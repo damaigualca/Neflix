@@ -14,4 +14,5 @@ public interface Actions {
     public void delete(int id);
     public void edit(int id);
     public void update(int id);
+    public void list();
 }

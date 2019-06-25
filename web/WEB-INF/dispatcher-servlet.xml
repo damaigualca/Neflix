@@ -23,6 +23,8 @@
         <property name="mappings">
             <props>
                  <prop key="index.htm">indexController</prop>
+                 <prop key="/admin/indexAdmin.htm">indexAdminController</prop>
+                 <prop key="/admin/estadisticas.htm">estadisticasController</prop>
                  <prop key="catalog-page.htm">catalogo</prop>
                  <prop key="index1.htm">indexC</prop>
                  <prop key="agregar.htm">indexC</prop>
@@ -68,5 +70,12 @@
     <bean name="registration"
           class="org.springframework.web.servlet.mvc.ParameterizableViewController"
           p:viewName="registration" />
+    <bean name="indexAdminController"
+          class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="admin/indexAdmin" />
+    <bean name="estadisticasController"
+          class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="admin/estadisticas" />
+
 
 </beans>

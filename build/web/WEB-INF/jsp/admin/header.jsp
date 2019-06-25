@@ -22,11 +22,11 @@
                 class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav ml-auto">
                      
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="<c:url value="index.htm"/>">INICIO</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="<c:url value="catalog-page.htm"/>">CATALOGO</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link"  href="/Neflix/admin/indexAdmin.htm">INICIO</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="<c:url value="pelicula.htm"/>">PELÍCULA</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="<c:url value="product-page.htm"/>">VER PELICULA</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="<c:url value="login.htm"/>">Iniciar sesión</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="<c:url value="registration.htm"/>">Registrarse</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="/Neflix/admin/socio/listaSocio.htm">SOCIOS</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link"  href="/Neflix/admin/estadisticas.htm">ESTADÍSTICAS</a></li>
                 </ul>
         </div>
         </div>

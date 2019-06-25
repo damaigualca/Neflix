@@ -4,6 +4,7 @@
     Author     : PC
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -53,10 +54,10 @@
             <p>© 2019, Neflix Company</p>
         </div>
     </footer>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="<c:url value="assets/js/jquery.min.js"/>"></script>
+        <script src="<c:url value="assets/bootstrap/js/bootstrap.min.js"/>"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
-    <script src="assets/js/smoothproducts.min.js"></script>
-    <script src="assets/js/theme.js"></script>
+    <script src="<c:url value="assets/js/smoothproducts.min.js"/>"></script>
+    <script src="<c:url value="assets/js/theme.js"/>"></script>
     </body>
 </html>
