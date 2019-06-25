@@ -16,6 +16,7 @@ public class Socio implements Actions{
     private String direccion;
     private String telefono;
     private String correo;
+    
     private String sql;
 
     public Socio() {

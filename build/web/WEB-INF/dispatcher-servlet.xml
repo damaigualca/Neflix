@@ -65,8 +65,8 @@
           class="org.springframework.web.servlet.mvc.ParameterizableViewController"
           p:viewName="product-page" />
     <bean name="login"
-          class="org.springframework.web.servlet.mvc.ParameterizableViewController"
-          p:viewName="login" />
+          class="Controller.LoginController"
+           />
     <bean name="registration"
           class="org.springframework.web.servlet.mvc.ParameterizableViewController"
           p:viewName="registration" />
