@@ -22,7 +22,7 @@
                 <div class="block-heading">
                     <h2 class="text-info">Iniciar Sesión</h2>
                 </div>
-                <form>
+                <form method="POST">
                     <div class="form-group"><label for="email">Email</label><input class="form-control item" type="email" id="email"></div>
                     <div class="form-group"><label for="password">Contraseña±a</label><input class="form-control" type="password" id="password"></div>
                     <div class="form-group">

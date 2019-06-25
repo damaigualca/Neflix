@@ -9,13 +9,14 @@ package Beans;
  *
  * @author PC
  */
-public class Socio {
+public class Socio implements Actions{
     private int id;
     private String cedula;
     private String nombre;
     private String direccion;
     private String telefono;
     private String correo;
+    private String sql;
 
     public Socio() {
     }
@@ -49,6 +50,14 @@ public class Socio {
         this.cedula = cedula;
     }
 
+    public String getSql() {
+        return sql;
+    }
+
+    public void setSql(String sql) {
+        this.sql = sql;
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -76,9 +85,30 @@ public class Socio {
     public String getCorreo() {
         return correo;
     }
-
+    
     public void setCorreo(String correo) {
         this.correo = correo;
+    }
+    @Override
+    public void agregar(){
+       sql="insert into socio(SOC_CEDULA,SOC_NOMBRE,SOC_DIRECCION,SOC_TELEFONO,SOC_CORREO)values(?,?,?,?,?)";
+    }
+    @Override
+    public void edit(int id){
+       sql= "select * from socio where SOC_ID="+id;
+    }
+    @Override
+    public void delete(int id){
+       sql= "delete from socio where SOC_ID="+id;
+    }
+    @Override
+    public void update(int id){
+       sql= "update  socio set SOC_CEDULA=?,SOC_NOMBRE=?,SOC_DIRECCION=?,SOC_TELEFONO=?,SOC_CORREO=? where SOC_ID="+id;
+    }
+
+    @Override
+    public void list() {
+        sql= "select * from socio";
     }
     
 }

@@ -28,9 +28,11 @@ public class SocioController {
     ModelAndView mav= new ModelAndView();
     int id;
     List datos;
+    
     @RequestMapping(value =  "/admin/socio/listaSocio.htm", method = RequestMethod.GET )
-    public ModelAndView Listar(){   
-        String sql= "select * from socio";
+    public ModelAndView Listar(Socio s){
+        s.list();
+        String sql= s.getSql();
         
         datos= this.jdbcTemplate.queryForList(sql);
         System.out.println(datos);
@@ -47,15 +49,17 @@ public class SocioController {
     }
     @RequestMapping(value="/admin/socio/agregarSocio.htm", method=RequestMethod.POST)
     public ModelAndView  Agregar(Socio s ){
-        String sql="insert into socio(SOC_CEDULA,SOC_NOMBRE,SOC_DIRECCION,SOC_TELEFONO,SOC_CORREO)values(?,?,?,?,?)";
+        s.agregar();
+        String sql=s.getSql();
         this.jdbcTemplate.update(sql, s.getCedula(),s.getNombre(),s.getDireccion(),s.getTelefono(),s.getCorreo());
         
         return new ModelAndView("redirect:/admin/socio/listaSocio.htm") ;
     }
     @RequestMapping(value="/admin/socio/editarSocio.htm", method=RequestMethod.GET)
-    public ModelAndView  Editar(HttpServletRequest request ){
+    public ModelAndView  Editar(HttpServletRequest request, Socio s ){
         id= Integer.parseInt(request.getParameter("id"));
-        String sql= "select * from socio where SOC_ID="+id;
+        s.edit(id);
+        String sql= s.getSql();
          datos= this.jdbcTemplate.queryForList(sql);
         mav.addObject("lista",datos);
         mav.setViewName("admin/socio/editarSocio");
@@ -64,17 +68,19 @@ public class SocioController {
     }
     @RequestMapping(value="/admin/socio/editarSocio.htm", method=RequestMethod.POST)
     public ModelAndView  Editar(Socio s ){
-        
-        String sql= "update  socio set SOC_CEDULA=?,SOC_NOMBRE=?,SOC_DIRECCION=?,SOC_TELEFONO=?,SOC_CORREO=? where SOC_ID="+id;
+        s.update(id);
+        String sql=s.getSql();
         this.jdbcTemplate.update(sql, s.getCedula(),s.getNombre(),s.getDireccion(),s.getTelefono(),s.getCorreo());
          
         return new ModelAndView("redirect:/admin/socio/listaSocio.htm") ;
         
     }
     @RequestMapping("/admin/socio/eliminarSocio.htm")
-    public ModelAndView Delete(HttpServletRequest request){
+    public ModelAndView Delete(HttpServletRequest request,Socio s){
         id= Integer.parseInt(request.getParameter("id"));
-        String sql= "delete from socio where SOC_ID="+id;
+        
+        s.delete(id);
+        String sql= sql= s.getSql();
           this.jdbcTemplate.update(sql);
         
         return new ModelAndView("redirect:/admin/socio/listaSocio.htm") ;
