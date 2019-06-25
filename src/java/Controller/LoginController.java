@@ -27,19 +27,21 @@ public class LoginController {
   }
   @RequestMapping(value = "login.htm", method = RequestMethod.POST)
   public ModelAndView login( Login login) {
-    
+    mav.clear();
     login.validateUser();
     String sql= login.getSql();
     datos= null;
     datos= this.jdbcTemplate.queryForList(sql);
     mav.addObject(datos);
     if (!mav.isEmpty() ) {
-       mav.clear();
+       
     return new ModelAndView("redirect:/admin/indexAdmin.htm") ;
     } else {
         mav.addObject("message", "Username or Password is wrong!!");
-        mav.clear();
-        return new ModelAndView("redirect:/login.htm") ;
+        
+        
+        return mav;
+        
     }
     
   }

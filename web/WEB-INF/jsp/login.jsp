@@ -25,7 +25,11 @@
                 <form method="POST" >
                     <div class="form-group"><label for="email">Email</label><input class="form-control item" type="text" id="username" name="username"></div>
                     <div class="form-group"><label for="password">Contraseña</label><input class="form-control" type="password" id="password" name="password"></div>
-                    <div class="form-group" ><label style="font-style: italic; color: red;">${message}</label></div>
+                    <table align="center">
+                <tr>
+                    <td style="font-style: italic; color: red;">${message}</td>
+                </tr>
+            </table>
                     <div class="form-group">
                         <div class="form-check"><input class="form-check-input" type="checkbox" id="checkbox"><label class="form-check-label" for="checkbox">Recordarme</label></div>
                     </div><button class="btn btn-primary btn-block" type="submit">Log In</button></form>
