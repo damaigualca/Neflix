@@ -26,8 +26,14 @@
                  <prop key="/admin/indexAdmin.htm">indexAdminController</prop>
                  <prop key="/admin/estadisticas.htm">estadisticasController</prop>
                  <prop key="catalog-page.htm">catalogo</prop>
-                 <prop key="index1.htm">indexC</prop>
-                 <prop key="agregar.htm">indexC</prop>
+                 <prop key="/admin/actor/listaActor.htm">actorController</prop>
+                 <prop key="/admin/actor/agregarActor.htm">actorController</prop>
+                 <prop key="/admin/actor/editarActor.htm">actorController</prop>
+                 <prop key="/admin/actor/eliminarActor.htm">actorController</prop>
+                 <prop key="/admin/pelicula/listaPelicula.htm">peliController</prop>
+                 <prop key="/admin/pelicula/agregarPelicula.htm">peliController</prop>
+                 <prop key="/admin/pelicula/editarPelicula.htm">peliController</prop>
+                 <prop key="/admin/pelicula/eliminarPelicula.htm">peliController</prop>
                  <prop key="/admin/socio/listaSocio.htm">listaSocio</prop>
                  <prop key="/admin/socio/agregarSocio.htm">listaSocio</prop>
                  <prop key="/admin/socio/editarSocio.htm">listaSocio</prop>
@@ -49,8 +55,11 @@
     <!--
     The index controller.
     -->
-    <bean name="indexC"
-          class="Controller.Controlador"
+    <bean name="actorController"
+          class="Controller.ActorController"
+          />
+    <bean name="peliController"
+          class="Controller.PeliculaController"
           />
     <bean name="listaSocio"
           class="Controller.SocioController"

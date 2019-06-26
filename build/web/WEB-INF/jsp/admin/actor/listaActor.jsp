@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="assets/css/smoothproducts.css">
         <title>CRUD</title>
     </head>
-    <%@include file="header.jsp" %> 
+    <%@include file="../header.jsp" %> 
 
     <body>
         <br>
@@ -25,7 +25,7 @@
         <div class="container mt-4">
             <div class="card border-info">
                 <div class="card-header bg-dark text-white">
-                    <a class="btn btn-success" href="agregar.htm">Nuevo Registro Actor</a>
+                    <a class="btn btn-success" href="<c:url value="/admin/actor/agregarActor.htm"/>">Nuevo Registro Actor</a>
                 </div>
                 <div class="card-body">
                     <table class="table">
@@ -41,11 +41,12 @@
                             <c:forEach var="dato" items="${lista}">
                             <tr>
                                 <td>${dato.ACT_ID}</td>
-                                <td>${dato.SEX_ID}</td>
+                                <td >${dato.SEX_ID}</td>
+                               
                                 <td>${dato.ACT_NOMBRE}</td>
                                 <td>
-                                    <a class="btn btn-primary ">Edit</a>
-                                    <a class="btn btn-primary ">Delete</a>
+                                    <a href="editarActor.htm?id=${dato.ACT_ID}" class="btn btn-primary ">Edit</a>
+                                    <a href="eliminarActor.htm?id=${dato.ACT_ID}" class="btn btn-primary ">Delete</a>
                                     
                                 </td>
                             </tr>
@@ -58,7 +59,7 @@
             </div>
         </div>
         <br><br>
-        <%@include file="footer.jsp" %> 
+        <%@include file="../footer.jsp" %> 
         
     </body>
 </html>

@@ -23,10 +23,12 @@
                 <ul class="nav navbar-nav ml-auto">
                      
                     <li class="nav-item" role="presentation"><a class="nav-link"  href="/Neflix/admin/indexAdmin.htm">INICIO</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="<c:url value="pelicula.htm"/>">PELÍCULA</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="/Neflix/admin/pelicula/listaPelicula.htm">PELÍCULAS</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="<c:url value="product-page.htm"/>">VER PELICULA</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="/Neflix/admin/socio/listaSocio.htm">SOCIOS</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="/Neflix/admin/actor/listaActor.htm">ACTORES</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link"  href="/Neflix/admin/estadisticas.htm">ESTADÍSTICAS</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link"  href="/Neflix/index.htm">SALIR</a></li>
                 </ul>
         </div>
         </div>

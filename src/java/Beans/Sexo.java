@@ -5,45 +5,14 @@
  */
 package Beans;
 
-import java.util.Date;
-
 /**
  *
  * @author PC
  */
-public class Pelicula implements Actions{
+public class Sexo implements Actions{
     private int id;
     private String nombre;
-    private double costo;
-    private String fecha_estreno;
     private String sql;
-    private String genero;
-    private String formato;
-    private String director;
-
-    public String getGenero() {
-        return genero;
-    }
-
-    public void setGenero(String genero) {
-        this.genero = genero;
-    }
-
-    public String getFormato() {
-        return formato;
-    }
-
-    public void setFormato(String formato) {
-        this.formato = formato;
-    }
-
-    public String getDirector() {
-        return director;
-    }
-
-    public void setDirector(String director) {
-        this.director = director;
-    }
 
     public String getSql() {
         return sql;
@@ -53,14 +22,12 @@ public class Pelicula implements Actions{
         this.sql = sql;
     }
 
-    public Pelicula() {
+    public Sexo() {
     }
 
-    public Pelicula(int id, String nombre, double costo, String fecha_estreno) {
+    public Sexo(int id, String nombre) {
         this.id = id;
         this.nombre = nombre;
-        this.costo = costo;
-        this.fecha_estreno = fecha_estreno;
     }
 
     public int getId() {
@@ -79,25 +46,9 @@ public class Pelicula implements Actions{
         this.nombre = nombre;
     }
 
-    public double getCosto() {
-        return costo;
-    }
-
-    public void setCosto(double costo) {
-        this.costo = costo;
-    }
-
-    public String getFecha_estreno() {
-        return fecha_estreno;
-    }
-
-    public void setFecha_estreno(String fecha_estreno) {
-        this.fecha_estreno = fecha_estreno;
-    }
-
     @Override
     public void agregar() {
-        sql="insert into pelicula(GEN_ID,DIR_ID,FOR_ID,PEL_NOMBRE,PEL_COSTO,PEL_FECHA_ESTRENO)values(?,?,?,?,?,?)";
+        sql="insert into socio(SOC_CEDULA,SOC_NOMBRE,SOC_DIRECCION,SOC_TELEFONO,SOC_CORREO)values(?,?,?,?,?)";
     }
 
     @Override
@@ -117,8 +68,7 @@ public class Pelicula implements Actions{
 
     @Override
     public void list() {
-        sql= "select * from pelicula";
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
     
 }

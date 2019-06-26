@@ -17,28 +17,29 @@
                 </div>
                 <div class="card-body">
                     <form method="POST">
-                        <label>Cedula</label>
-                        <input type="text" name="cedula" class="form-control">
+
                         <label>Nombre</label>
                         <input type="text" name="nombre" class="form-control">
-                        <label>Direccion</label>
-                        <input type="text" name="direccion" class="form-control">
-                        <label>Telefono</label>
-                        <input type="text" name="telefono" class="form-control">
-                        <label>Correo</label>
-                        <input type="text" name="correo" class="form-control">
+                        <label>Sexo</label>
+                        <select class="browser-default custom-select" name="sexo">
+                            <c:forEach items="${lista}" var="category">
+                                <option name="sexo" value="${category.SEX_ID}">${category.SEX_NOMBRE}</option>
+                            </c:forEach>
+                        </select> 
+
+
                         <br><br>
                         <input type="submit" value="Agregar" class="btn btn-success">
-                        <a class="btn btn-dark" href="<c:url value="/admin/socio/listaSocio.htm"/>"> Regresar</a>
-                            
-                            
-                            
-                            
+                        <a class="btn btn-dark" href="<c:url value="/admin/actor/listaActor.htm"/>"> Regresar</a>
+
+
+
+
                     </form>
                 </div>
             </div>
         </div>
-                        <br><br>
+        <br><br>
         <%@include file="../footer.jsp" %>
     </body>
 </html>

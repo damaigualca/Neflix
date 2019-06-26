@@ -13,23 +13,22 @@
         <div class="container mt-4 col-lg-4">
             <div class="card border-info">
                 <div class="card-header">
-                    <h4>Editar Socio</h4>
+                    <h4>Editar Actor</h4>
                 </div>
                 <div class="card-body">
                     <form method="POST">
-                        <label>Cedula</label>
-                        <input type="text" name="cedula" class="form-control" value="${lista[0].SOC_CEDULA}">
+                        
                         <label>Nombre</label>
-                        <input type="text" name="nombre" class="form-control" value="${lista[0].SOC_NOMBRE}">
-                        <label>Direccion</label>
-                        <input type="text" name="direccion" class="form-control" value="${lista[0].SOC_DIRECCION}">
-                        <label>Telefono</label>
-                        <input type="text" name="telefono" class="form-control" value="${lista[0].SOC_TELEFONO}">
-                        <label>Correo</label>
-                        <input type="text" name="correo" class="form-control" value="${lista[0].SOC_CORREO}">
+                        <input type="text" name="nombre" class="form-control" value="${lista[0].ACT_NOMBRE}"><br>
+                        <label>Sexo</label>
+                         <select class="browser-default custom-select" name="sexo">
+                            <c:forEach items="${listaS}" var="category">
+                                <option name="sexo" value="${category.SEX_ID}">${category.SEX_NOMBRE}</option>
+                            </c:forEach>
+                        </select>
                         <br><br>
                         <input type="submit" value="Actualizar" class="btn btn-success">
-                        <a class="btn btn-dark" href="<c:url value="/admin/socio/listaSocio.htm"/>"> Regresar</a>
+                        <a class="btn btn-dark" href="<c:url value="/admin/actor/listaActor.htm"/>"> Regresar</a>
                             
                             
                             
