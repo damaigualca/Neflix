@@ -27,7 +27,7 @@ public class PeliculaController {
     JdbcTemplate jdbcTemplate= new  JdbcTemplate(con.Conectar());
     ModelAndView mav= new ModelAndView();
     int id;
-    List datos,datos1,datos2;
+    List datosQ,datos,datos1,datos2;
     @RequestMapping(value =  "/admin/pelicula/listaPelicula.htm", method = RequestMethod.GET )
     public ModelAndView Listar(Pelicula p){   
         p.list();
@@ -44,8 +44,6 @@ public class PeliculaController {
     @RequestMapping(value="/admin/pelicula/agregarPelicula.htm", method=RequestMethod.GET)
     public ModelAndView  Agregar(){
         mav.addObject(new Pelicula());
-        
-        
         String sql= "select * from genero";
          datos= this.jdbcTemplate.queryForList(sql);
          mav.addObject("listaG",datos);
@@ -68,37 +66,43 @@ public class PeliculaController {
         
         return new ModelAndView("redirect:/admin/pelicula/listaPelicula.htm") ;
     }
-    @RequestMapping(value="/admin/actor/editarActor.htm", method=RequestMethod.GET)
-    public ModelAndView  Editar(HttpServletRequest request, Actor a ){
+    @RequestMapping(value="/admin/pelicula/editarPelicula.htm", method=RequestMethod.GET)
+    public ModelAndView  Editar(HttpServletRequest request, Pelicula p ){
         id= Integer.parseInt(request.getParameter("id"));
-        a.edit(id);
-        String sql= a.getSql();
+        p.edit(id);
+        String sqlQ= p.getSql();
+        datosQ= this.jdbcTemplate.queryForList(sqlQ);
+        mav.addObject("listaQ",datosQ);
+         String sql= "select * from genero";
          datos= this.jdbcTemplate.queryForList(sql);
-         String sql1="select * from sexo";
+         mav.addObject("listaG",datos);
+         String sql1= "select * from director";
          datos1= this.jdbcTemplate.queryForList(sql1);
-        mav.addObject("lista",datos);
-        mav.addObject("listaS",datos1);
-        mav.setViewName("admin/actor/editarActor");
+         mav.addObject("listaD",datos1);
+         String sql2= "select * from formato";
+         datos2= this.jdbcTemplate.queryForList(sql2);
+         mav.addObject("listaF",datos2);
+        mav.setViewName("admin/pelicula/editarPelicula");
         
         return mav ;
     }
-    @RequestMapping(value="/admin/actor/editarActor.htm", method=RequestMethod.POST)
-    public ModelAndView  Editar(Actor a ){
-        a.update(id);
-        String sql=a.getSql();
-        this.jdbcTemplate.update(sql, a.getNombre(),a.getSexo());
+    @RequestMapping(value="/admin/pelicula/editarPelicula.htm", method=RequestMethod.POST)
+    public ModelAndView  Editar(Pelicula p ){
+        p.update(id);
+        String sql=p.getSql();
+        this.jdbcTemplate.update(sql, p.getGenero(),p.getDirector(),p.getFormato(),p.getNombre(),p.getCosto(),p.getFecha_estreno());
          
-        return new ModelAndView("redirect:/admin/actor/listaActor.htm") ;
+        return new ModelAndView("redirect:/admin/pelicula/listaPelicula.htm") ;
         
     }
-    @RequestMapping("/admin/actor/eliminarActor.htm")
-    public ModelAndView Delete(HttpServletRequest request,Actor a){
+    @RequestMapping("/admin/pelicula/eliminarPelicula.htm")
+    public ModelAndView Delete(HttpServletRequest request,Pelicula p){
         id= Integer.parseInt(request.getParameter("id"));
         
-        a.delete(id);
-        String sql= sql= a.getSql();
+        p.delete(id);
+        String sql= sql= p.getSql();
           this.jdbcTemplate.update(sql);
         
-        return new ModelAndView("redirect:/admin/actor/listaActor.htm") ;
+        return new ModelAndView("redirect:/admin/pelicula/listaPelicula.htm") ;
     }
 }

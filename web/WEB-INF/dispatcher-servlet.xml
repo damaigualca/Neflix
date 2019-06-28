@@ -34,6 +34,10 @@
                  <prop key="/admin/pelicula/agregarPelicula.htm">peliController</prop>
                  <prop key="/admin/pelicula/editarPelicula.htm">peliController</prop>
                  <prop key="/admin/pelicula/eliminarPelicula.htm">peliController</prop>
+                 <prop key="/admin/formato/listaFormato.htm">formatoController</prop>
+                 <prop key="/admin/formato/agregarFormato.htm">formatoController</prop>
+                 <prop key="/admin/formato/editarFormato.htm">formatoController</prop>
+                 <prop key="/admin/formato/eliminarFormato.htm">formatoController</prop>
                  <prop key="/admin/socio/listaSocio.htm">listaSocio</prop>
                  <prop key="/admin/socio/agregarSocio.htm">listaSocio</prop>
                  <prop key="/admin/socio/editarSocio.htm">listaSocio</prop>
@@ -57,6 +61,9 @@
     -->
     <bean name="actorController"
           class="Controller.ActorController"
+          />
+    <bean name="formatoController"
+          class="Controller.FormatoController"
           />
     <bean name="peliController"
           class="Controller.PeliculaController"

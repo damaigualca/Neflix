@@ -28,14 +28,16 @@ public class ActorController {
     Conexion con= new Conexion();
     JdbcTemplate jdbcTemplate= new  JdbcTemplate(con.Conectar());
     ModelAndView mav= new ModelAndView();
+    Actor a_aux= new Actor();
     int id;
     List datos,datos1;
     @RequestMapping(value =  "/admin/actor/listaActor.htm", method = RequestMethod.GET )
-    public ModelAndView Listar(){   
-        String sql= "select * from actor";
+    public ModelAndView Listar(Actor a){   
+        a.list();
+        String sql= a.getSql();
         
         List datos= this.jdbcTemplate.queryForList(sql);
-        System.out.println(datos);
+        
       
         mav.addObject("lista",datos);
         mav.setViewName("admin/actor/listaActor");
@@ -45,8 +47,8 @@ public class ActorController {
     public ModelAndView  Agregar(){
         mav.addObject(new Actor());
         mav.addObject(new Sexo());
-        
-        String sql= "select * from sexo";
+        a_aux.select("sexo");
+        String sql= a_aux.getSql();
          datos= this.jdbcTemplate.queryForList(sql);
          mav.addObject("lista",datos);
         mav.setViewName("admin/actor/agregarActor");

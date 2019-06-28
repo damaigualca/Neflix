@@ -102,17 +102,17 @@ public class Pelicula implements Actions{
 
     @Override
     public void delete(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        sql= "delete from pelicula where PEL_ID="+id;
     }
 
     @Override
     public void edit(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        sql= "select * from pelicula where PEL_ID="+id;
     }
 
     @Override
     public void update(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        sql= "update  pelicula set GEN_ID=?,DIR_ID=?,FOR_ID=?,PEL_NOMBRE=?,PEL_COSTO=?,PEL_FECHA_ESTRENO=? where PEL_ID="+id;
     }
 
     @Override

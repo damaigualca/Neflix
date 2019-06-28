@@ -26,7 +26,7 @@
                     <li class="nav-item" role="presentation"><a class="nav-link" href="<c:url value="catalog-page.htm"/>">CATALOGO</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="<c:url value="product-page.htm"/>">VER PELICULA</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="<c:url value="login.htm"/>">Iniciar sesión</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="<c:url value="registration.htm"/>">Registrarse</a></li>
+                    
                 </ul>
         </div>
         </div>

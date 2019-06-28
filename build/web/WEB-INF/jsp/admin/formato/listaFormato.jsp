@@ -25,37 +25,27 @@
         <div class="container mt-4">
             <div class="card border-info">
                 <div class="card-header bg-dark text-white">
-                    <a class="btn btn-success" href="<c:url value="/admin/pelicula/agregarPelicula.htm"/>">Nuevo Registro Pelicula</a>
+                    <a class="btn btn-success" href="<c:url value="/admin/formato/agregarFormato.htm"/>">Nuevo Registro Formato Pelicula</a>
                 </div>
                 <div class="card-body">
                     <table class="table">
                         <thead class="thead-dark">
                             <tr>
                                 <th scope="row">ID</th>
-                                <th scope="row">Género</th>
+                                
                                 <th scope="row">Nombre</th>
-                                <th scope="row">Director</th>
-                                <th scope="row">Formato</th>
-                                <th scope="row">Costo</th>
-                                <th scope="row">Fecha de Estreno</th>
                                 <th scope="row">Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
                             <c:forEach var="dato" items="${lista}">
                             <tr>
-                                <td>${dato.PEL_ID}</td>
-                                <td >${dato.GEN_ID}</td>
-                               
-                                <td>${dato.PEL_NOMBRE}</td>
-                                <td>${dato.DIR_ID}</td>
-                                <td >${dato.FOR_ID}</td>
-                               
-                                <td>${dato.PEL_COSTO}</td>
-                                <td>${dato.PEL_FECHA_ESTRENO}</td>
+                                <td>${dato.FOR_ID}</td>
+                                <td >${dato.FOR_NOMBRE}</td>
+                              
                                 <td>
-                                    <a href="editarPelicula.htm?id=${dato.PEL_ID}" class="btn btn-primary ">Edit</a>
-                                    <a href="eliminarPelicula.htm?id=${dato.PEL_ID}" class="btn btn-primary ">Delete</a>
+                                    <a href="editarFormato.htm?id=${dato.FOR_ID}" class="btn btn-primary ">Edit</a>
+                                    <a href="eliminarFormato.htm?id=${dato.FOR_ID}" class="btn btn-primary ">Delete</a>
                                     
                                 </td>
                             </tr>

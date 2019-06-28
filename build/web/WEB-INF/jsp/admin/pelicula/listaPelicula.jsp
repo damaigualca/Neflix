@@ -25,14 +25,14 @@
         <div class="container mt-4">
             <div class="card border-info">
                 <div class="card-header bg-dark text-white">
-                    <a class="btn btn-success" href="<c:url value="/admin/pelicula/agregarPelicula.htm"/>">Nuevo Registro Actor</a>
+                    <a class="btn btn-success" href="<c:url value="/admin/pelicula/agregarPelicula.htm"/>">Nuevo Registro Pelicula</a>
                 </div>
                 <div class="card-body">
                     <table class="table">
                         <thead class="thead-dark">
                             <tr>
                                 <th scope="row">ID</th>
-                                <th scope="row">Genero</th>
+                                <th scope="row">Género</th>
                                 <th scope="row">Nombre</th>
                                 <th scope="row">Director</th>
                                 <th scope="row">Formato</th>
@@ -54,8 +54,8 @@
                                 <td>${dato.PEL_COSTO}</td>
                                 <td>${dato.PEL_FECHA_ESTRENO}</td>
                                 <td>
-                                    <a href="editarActor.htm?id=${dato.ACT_ID}" class="btn btn-primary ">Edit</a>
-                                    <a href="eliminarActor.htm?id=${dato.ACT_ID}" class="btn btn-primary ">Delete</a>
+                                    <a href="editarPelicula.htm?id=${dato.PEL_ID}" class="btn btn-primary ">Edit</a>
+                                    <a href="eliminarPelicula.htm?id=${dato.PEL_ID}" class="btn btn-primary ">Delete</a>
                                     
                                 </td>
                             </tr>

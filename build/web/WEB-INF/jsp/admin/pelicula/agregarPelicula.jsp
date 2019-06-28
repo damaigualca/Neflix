@@ -18,7 +18,8 @@
                 <div class="card-body">
                     <form method="POST">
 
-                       
+                       <label>Nombre</label>
+                        <input type="text" name="nombre" class="form-control">
                         <label>Género</label>
                         <select class="browser-default custom-select" name="genero">
                             <c:forEach items="${listaG}" var="categoryG">
@@ -37,8 +38,7 @@
                                 <option name="formato" value="${categoryF.FOR_ID}">${categoryF.FOR_NOMBRE}</option>
                             </c:forEach>
                         </select> 
-                         <label>Nombre</label>
-                        <input type="text" name="nombre" class="form-control">
+                         
                         <label>Costo</label>
                         <input type="text" name="costo" class="form-control">
                         <label>Fecha de Estreno</label>

@@ -9,20 +9,17 @@ package Beans;
  *
  * @author PC
  */
-public class Actor implements Actions{
+public class Formato implements Actions{
    private int id;
    private String nombre;
    private String sql;
-   private String sexo;
 
-    public Actor() {
+    public Formato() {
     }
 
-    public Actor(int id, String nombre, String sql, String sexo) {
+    public Formato(int id, String nombre) {
         this.id = id;
         this.nombre = nombre;
-        this.sql = sql;
-        this.sexo = sexo;
     }
 
     public int getId() {
@@ -49,39 +46,29 @@ public class Actor implements Actions{
         this.sql = sql;
     }
 
-    public String getSexo() {
-        return sexo;
-    }
-
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
-    }
-
     @Override
     public void agregar() {
-        sql="insert into actor(SEX_ID,ACT_NOMBRE)values(?,?)";
+        sql="insert into formato(FOR_NOMBRE)values(?)";
     }
 
     @Override
     public void delete(int id) {
-        sql= "delete from actor where ACT_ID="+id;
+        sql= "delete from formato where FOR_ID="+id;
     }
 
     @Override
     public void edit(int id) {
-        sql= "select * from actor where ACT_ID="+id;
+        sql= "select * from formato where FOR_ID="+id;
     }
 
     @Override
     public void update(int id) {
-        sql= "update  actor set ACT_NOMBRE=?,SEX_ID=? where ACT_ID="+id;
+        sql= "update  actor set FOR_NOMBRE=? where FOR_ID="+id;
     }
 
     @Override
     public void list() {
-        sql= "select * from actor";
+        sql= "select * from formato";
     }
-   public void select(String columna){
-       sql="select * from "+columna;
-   }
+   
 }

@@ -19,16 +19,34 @@
                     <form method="POST">
                         
                         <label>Nombre</label>
-                        <input type="text" name="nombre" class="form-control" value="${lista[0].ACT_NOMBRE}"><br>
-                        <label>Sexo</label>
-                         <select class="browser-default custom-select" name="sexo">
-                            <c:forEach items="${listaS}" var="category">
-                                <option name="sexo" value="${category.SEX_ID}">${category.SEX_NOMBRE}</option>
+                        <input type="text" name="nombre" class="form-control" value="${listaQ[0].PEL_NOMBRE}">
+                        <label>Género</label>
+                        <select class="browser-default custom-select" name="genero">
+                            <c:forEach items="${listaG}" var="categoryG">
+                                <option name="genero" value="${categoryG.GEN_ID}">${categoryG.GEN_NOMBRE}</option>
                             </c:forEach>
-                        </select>
+                        </select> 
+                        <label>Director</label>
+                        <select class="browser-default custom-select" name="director">
+                            <c:forEach items="${listaD}" var="categoryD">
+                                <option name="director" value="${categoryD.DIR_ID}">${categoryD.DIR_NOMBRE}</option>
+                            </c:forEach>
+                        </select> 
+                        <label>Formato</label>
+                        <select class="browser-default custom-select" name="formato">
+                            <c:forEach items="${listaF}" var="categoryF">
+                                <option name="formato" value="${categoryF.FOR_ID}">${categoryF.FOR_NOMBRE}</option>
+                            </c:forEach>
+                        </select> 
+                         
+                        <label>Costo</label>
+                        <input type="text" name="costo" class="form-control" value="${listaQ[0].PEL_COSTO}">
+                        <label>Fecha de Estreno</label>
+                        <input type="text" name="fecha_estreno" class="form-control" value="${listaQ[0].PEL_FECHA_ESTRENO}">
+                        
                         <br><br>
-                        <input type="submit" value="Actualizar" class="btn btn-success">
-                        <a class="btn btn-dark" href="<c:url value="/admin/actor/listaActor.htm"/>"> Regresar</a>
+                        <input type="submit" value="Actualizar" class="btn btn-success" >
+                        <a class="btn btn-dark" href="<c:url value="/admin/pelicula/listaPelicula.htm"/>"> Regresar</a>
                             
                             
                             
