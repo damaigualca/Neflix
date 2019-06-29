@@ -28,6 +28,7 @@ public class PeliculaController {
     ModelAndView mav= new ModelAndView();
     int id;
     List datosQ,datos,datos1,datos2;
+    Pelicula pel_aux= new Pelicula();
     @RequestMapping(value =  "/admin/pelicula/listaPelicula.htm", method = RequestMethod.GET )
     public ModelAndView Listar(Pelicula p){   
         p.list();
@@ -44,13 +45,16 @@ public class PeliculaController {
     @RequestMapping(value="/admin/pelicula/agregarPelicula.htm", method=RequestMethod.GET)
     public ModelAndView  Agregar(){
         mav.addObject(new Pelicula());
-        String sql= "select * from genero";
+        pel_aux.select("genero");
+        String sql= pel_aux.getSql();
          datos= this.jdbcTemplate.queryForList(sql);
          mav.addObject("listaG",datos);
-         String sql1= "select * from director";
+         pel_aux.select("director");
+         String sql1= pel_aux.getSql();
          datos1= this.jdbcTemplate.queryForList(sql1);
          mav.addObject("listaD",datos1);
-         String sql2= "select * from formato";
+         pel_aux.select("formato");
+         String sql2= pel_aux.getSql();
          datos2= this.jdbcTemplate.queryForList(sql2);
          mav.addObject("listaF",datos2);
         mav.setViewName("admin/pelicula/agregarPelicula");
@@ -73,13 +77,16 @@ public class PeliculaController {
         String sqlQ= p.getSql();
         datosQ= this.jdbcTemplate.queryForList(sqlQ);
         mav.addObject("listaQ",datosQ);
-         String sql= "select * from genero";
+        pel_aux.select("genero");
+         String sql= pel_aux.getSql();
          datos= this.jdbcTemplate.queryForList(sql);
          mav.addObject("listaG",datos);
-         String sql1= "select * from director";
+         pel_aux.select("director");
+         String sql1= pel_aux.getSql();
          datos1= this.jdbcTemplate.queryForList(sql1);
          mav.addObject("listaD",datos1);
-         String sql2= "select * from formato";
+         pel_aux.select("formato");
+         String sql2= pel_aux.getSql();
          datos2= this.jdbcTemplate.queryForList(sql2);
          mav.addObject("listaF",datos2);
         mav.setViewName("admin/pelicula/editarPelicula");
@@ -100,7 +107,7 @@ public class PeliculaController {
         id= Integer.parseInt(request.getParameter("id"));
         
         p.delete(id);
-        String sql= sql= p.getSql();
+        String sql= p.getSql();
           this.jdbcTemplate.update(sql);
         
         return new ModelAndView("redirect:/admin/pelicula/listaPelicula.htm") ;

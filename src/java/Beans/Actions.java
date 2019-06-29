@@ -15,4 +15,5 @@ public interface Actions {
     public void edit(int id);
     public void update(int id);
     public void list();
+    public void select(String columna);
 }

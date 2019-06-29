@@ -119,6 +119,11 @@ public class Pelicula implements Actions{
     public void list() {
         sql= "select * from pelicula";
     }
+
+    @Override
+    public void select(String columna) {
+        sql="select * from "+columna;
+    }
     
     
 }

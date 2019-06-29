@@ -70,5 +70,10 @@ public class Formato implements Actions{
     public void list() {
         sql= "select * from formato";
     }
+
+    @Override
+    public void select(String columna) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
    
 }

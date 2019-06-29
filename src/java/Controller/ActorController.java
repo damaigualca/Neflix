@@ -70,7 +70,8 @@ public class ActorController {
         a.edit(id);
         String sql= a.getSql();
          datos= this.jdbcTemplate.queryForList(sql);
-         String sql1="select * from sexo";
+         a_aux.select("sexo");
+         String sql1= a_aux.getSql();
          datos1= this.jdbcTemplate.queryForList(sql1);
         mav.addObject("lista",datos);
         mav.addObject("listaS",datos1);
