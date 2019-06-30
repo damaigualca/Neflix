@@ -9,15 +9,15 @@ package Beans;
  *
  * @author PC
  */
-public class Formato implements Actions{
-   private int id;
+public class Director implements Actions{
+     private int id;
    private String nombre;
    private String sql;
 
-    public Formato() {
+    public Director() {
     }
 
-    public Formato(int id, String nombre) {
+    public Director(int id, String nombre) {
         this.id = id;
         this.nombre = nombre;
     }
@@ -48,32 +48,31 @@ public class Formato implements Actions{
 
     @Override
     public void agregar() {
-        sql="insert into formato(FOR_NOMBRE)values(?)";
+        sql="insert into director(DIR_NOMBRE)values(?)";
     }
 
     @Override
     public void delete(int id) {
-        sql= "delete from formato where FOR_ID="+id;
+        sql= "delete from director where DIR_ID="+id;
     }
 
     @Override
     public void edit(int id) {
-        sql= "select * from formato where FOR_ID="+id;
+        sql= "select * from director where DIR_ID="+id;
     }
 
     @Override
     public void update(int id) {
-        sql= "update  formato set FOR_NOMBRE=? where FOR_ID="+id;
+        sql= "update  director set DIR_NOMBRE=? where DIR_ID="+id;
     }
 
     @Override
     public void list() {
-        sql= "select * from formato";
+        sql= "select * from director";
     }
 
     @Override
     public void select(String columna) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-   
 }

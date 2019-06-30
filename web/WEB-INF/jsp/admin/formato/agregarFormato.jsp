@@ -23,12 +23,12 @@
                         <label>Nombre</label>
                         <input type="text" name="nombre" class="form-control">
                            
-                        </select> 
+                         
 
 
                         <br><br>
                         <input type="submit" value="Agregar" class="btn btn-success">
-                        <a class="btn btn-dark" href="<c:url value="/admin/actor/listaActor.htm"/>"> Regresar</a>
+                        <a class="btn btn-dark" href="<c:url value="/admin/formato/listaFormato.htm"/>"> Regresar</a>
 
 
 

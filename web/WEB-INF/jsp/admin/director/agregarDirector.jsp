@@ -5,7 +5,9 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Editar Formato Pelicula</title>
+        <link rel="icon" type="image/png" sizes="25x25" href="<c:url value="/assets/img/stickeroid_5bf5461d4e179-3.png"/>">
+        <link rel="icon" type="image/png" sizes="35x35" href="<c:url value="/assets/img/stickeroid_5bf5461d4e179-4.png"/>">
+        <title>Agregar Formato Película</title>
     </head>
     <body>
         <%@include file="../header.jsp" %>
@@ -13,27 +15,29 @@
         <div class="container mt-4 col-lg-4">
             <div class="card border-info">
                 <div class="card-header">
-                    <h4>Editar Formato Película</h4>
+                    <h4>Agregar Nuevo Director Película</h4>
                 </div>
                 <div class="card-body">
                     <form method="POST">
-                        
+
                         <label>Nombre</label>
-                        <input type="text" name="nombre" class="form-control" value="${lista[0].FOR_NOMBRE}"><br>
-                        
-                        
+                        <input type="text" name="nombre" class="form-control">
+                           
+                         
+
+
                         <br><br>
-                        <input type="submit" value="Actualizar" class="btn btn-success">
-                        <a class="btn btn-dark" href="<c:url value="/admin/formato/listaFormato.htm"/>"> Regresar</a>
-                            
-                            
-                            
-                            
+                        <input type="submit" value="Agregar" class="btn btn-success">
+                        <a class="btn btn-dark" href="<c:url value="/admin/director/listaDirector.htm"/>"> Regresar</a>
+
+
+
+
                     </form>
                 </div>
             </div>
         </div>
-                        <br><br>
+        <br><br>
         <%@include file="../footer.jsp" %>
     </body>
 </html>
