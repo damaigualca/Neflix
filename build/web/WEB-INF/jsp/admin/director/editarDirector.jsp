@@ -13,18 +13,18 @@
         <div class="container mt-4 col-lg-4">
             <div class="card border-info">
                 <div class="card-header">
-                    <h4>Editar Formato Película</h4>
+                    <h4>Editar Director</h4>
                 </div>
                 <div class="card-body">
                     <form method="POST">
                         
                         <label>Nombre</label>
-                        <input type="text" name="nombre" class="form-control" value="${lista[0].FOR_NOMBRE}"><br>
+                        <input type="text" name="nombre" class="form-control" value="${lista[0].DIR_NOMBRE}"><br>
                         
                         
                         <br><br>
                         <input type="submit" value="Actualizar" class="btn btn-success">
-                        <a class="btn btn-dark" href="<c:url value="/admin/formato/listaFormato.htm"/>"> Regresar</a>
+                        <a class="btn btn-dark" href="<c:url value="/admin/director/listaDirector.htm"/>"> Regresar</a>
                             
                             
                             

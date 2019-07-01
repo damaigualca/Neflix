@@ -111,5 +111,10 @@ public class Socio implements Actions{
     public void list() {
         sql= "select * from socio";
     }
+
+    @Override
+    public void select(String columna) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

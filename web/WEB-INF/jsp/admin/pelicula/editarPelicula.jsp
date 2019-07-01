@@ -5,7 +5,9 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Editar Socio</title>
+        <title>Editar Pelicula</title>
+        <link rel="icon" type="image/png" sizes="25x25" href="<c:url value="/assets/img/stickeroid_5bf5461d4e179-3.png"/>">
+        <link rel="icon" type="image/png" sizes="35x35" href="<c:url value="/assets/img/stickeroid_5bf5461d4e179-4.png"/>">
     </head>
     <body>
         <%@include file="../header.jsp" %>
@@ -13,7 +15,7 @@
         <div class="container mt-4 col-lg-4">
             <div class="card border-info">
                 <div class="card-header">
-                    <h4>Editar Actor</h4>
+                    <h4>Editar Pelicula</h4>
                 </div>
                 <div class="card-body">
                     <form method="POST">

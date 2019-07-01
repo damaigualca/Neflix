@@ -7,7 +7,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="icon" type="image/png" sizes="25x25" href="<c:url value="/assets/img/stickeroid_5bf5461d4e179-3.png"/>">
         <link rel="icon" type="image/png" sizes="35x35" href="<c:url value="/assets/img/stickeroid_5bf5461d4e179-4.png"/>">
-        <title>Agregar Socio</title>
+        <title>Agregar Formato Película</title>
     </head>
     <body>
         <%@include file="../header.jsp" %>
@@ -15,24 +15,20 @@
         <div class="container mt-4 col-lg-4">
             <div class="card border-info">
                 <div class="card-header">
-                    <h4>Agregar Nuevo Socio</h4>
+                    <h4>Agregar Nuevo Director Película</h4>
                 </div>
                 <div class="card-body">
                     <form method="POST">
 
                         <label>Nombre</label>
                         <input type="text" name="nombre" class="form-control">
-                        <label>Sexo</label>
-                        <select class="browser-default custom-select" name="sexo">
-                            <c:forEach items="${lista}" var="category">
-                                <option name="sexo" value="${category.SEX_ID}">${category.SEX_NOMBRE}</option>
-                            </c:forEach>
-                        </select> 
+                           
+                         
 
 
                         <br><br>
                         <input type="submit" value="Agregar" class="btn btn-success">
-                        <a class="btn btn-dark" href="<c:url value="/admin/actor/listaActor.htm"/>"> Regresar</a>
+                        <a class="btn btn-dark" href="<c:url value="/admin/director/listaDirector.htm"/>"> Regresar</a>
 
 
 

@@ -81,6 +81,7 @@ public class Actor implements Actions{
     public void list() {
         sql= "select * from actor";
     }
+   @Override
    public void select(String columna){
        sql="select * from "+columna;
    }

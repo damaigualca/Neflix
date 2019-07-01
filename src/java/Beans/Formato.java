@@ -63,12 +63,17 @@ public class Formato implements Actions{
 
     @Override
     public void update(int id) {
-        sql= "update  actor set FOR_NOMBRE=? where FOR_ID="+id;
+        sql= "update  formato set FOR_NOMBRE=? where FOR_ID="+id;
     }
 
     @Override
     public void list() {
         sql= "select * from formato";
+    }
+
+    @Override
+    public void select(String columna) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
    
 }

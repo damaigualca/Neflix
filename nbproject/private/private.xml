@@ -19,20 +19,25 @@
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/indexAdmin.jsp</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/socio/editarSocio.jsp</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/footer.jsp</file>
+            <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/formato/listaFormato.jsp</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/product-page.jsp</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/pelicula/editarPelicula.jsp</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/actor/listaActor.jsp</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/actor/editarActor.jsp</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/src/java/Controller/LoginController.java</file>
+            <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/src/java/Beans/Formato.java</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/footer.jsp</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/src/java/Beans/Pelicula.java</file>
+            <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/formato/agregarFormato.jsp</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/estadisticas.jsp</file>
+            <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/src/java/Controller/FormatoController.java</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/src/java/Beans/Actions.java</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/socio/listaSocio.jsp</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/applicationContext.xml</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/src/java/Config/Conexion.java</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/login.jsp</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/header.jsp</file>
+            <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/formato/editarFormato.jsp</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/nbproject/build-impl.xml</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/actor/agregarActor.jsp</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/registration.jsp</file>

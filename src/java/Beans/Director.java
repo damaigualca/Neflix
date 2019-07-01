@@ -9,23 +9,15 @@ package Beans;
  *
  * @author PC
  */
-public class Sexo implements Actions{
-    private int id;
-    private String nombre;
-    private String sql;
+public class Director implements Actions{
+     private int id;
+   private String nombre;
+   private String sql;
 
-    public String getSql() {
-        return sql;
+    public Director() {
     }
 
-    public void setSql(String sql) {
-        this.sql = sql;
-    }
-
-    public Sexo() {
-    }
-
-    public Sexo(int id, String nombre) {
+    public Director(int id, String nombre) {
         this.id = id;
         this.nombre = nombre;
     }
@@ -46,34 +38,41 @@ public class Sexo implements Actions{
         this.nombre = nombre;
     }
 
+    public String getSql() {
+        return sql;
+    }
+
+    public void setSql(String sql) {
+        this.sql = sql;
+    }
+
     @Override
     public void agregar() {
-        sql="insert into socio(SOC_CEDULA,SOC_NOMBRE,SOC_DIRECCION,SOC_TELEFONO,SOC_CORREO)values(?,?,?,?,?)";
+        sql="insert into director(DIR_NOMBRE)values(?)";
     }
 
     @Override
     public void delete(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        sql= "delete from director where DIR_ID="+id;
     }
 
     @Override
     public void edit(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        sql= "select * from director where DIR_ID="+id;
     }
 
     @Override
     public void update(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        sql= "update  director set DIR_NOMBRE=? where DIR_ID="+id;
     }
 
     @Override
     public void list() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        sql= "select * from director";
     }
 
     @Override
     public void select(String columna) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
 }

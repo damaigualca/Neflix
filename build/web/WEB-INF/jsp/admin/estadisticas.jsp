@@ -1,9 +1,4 @@
-<%-- 
-    Document   : estadisticas
-    Created on : 25/06/2019, 10:22:49
-    Author     : PC
---%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -12,6 +7,8 @@
 	<script type="text/javascript" src="../assets/js/Chart.bundle.min.js"></script>
        
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="icon" type="image/png" sizes="25x25" href="<c:url value="/assets/img/stickeroid_5bf5461d4e179-3.png"/>">
+        <link rel="icon" type="image/png" sizes="35x35" href="<c:url value="/assets/img/stickeroid_5bf5461d4e179-4.png"/>">
         <title>Estadísticas</title>
           <script type="text/javascript">
 	$(document).ready(function(){

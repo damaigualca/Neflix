@@ -40,6 +40,10 @@
                  <prop key="/admin/formato/agregarFormato.htm">formatoController</prop>
                  <prop key="/admin/formato/editarFormato.htm">formatoController</prop>
                  <prop key="/admin/formato/eliminarFormato.htm">formatoController</prop>
+                 <prop key="/admin/director/listaDirector.htm">directorController</prop>
+                 <prop key="/admin/director/agregarDirector.htm">directorController</prop>
+                 <prop key="/admin/director/editarDirector.htm">directorController</prop>
+                 <prop key="/admin/director/eliminarDirector.htm">directorController</prop>
                  <prop key="/admin/socio/listaSocio.htm">listaSocio</prop>
                  <prop key="/admin/socio/agregarSocio.htm">listaSocio</prop>
                  <prop key="/admin/socio/editarSocio.htm">listaSocio</prop>
@@ -63,6 +67,9 @@
     -->
     <bean name="actorController"
           class="Controller.ActorController"
+          />
+    <bean name="directorController"
+          class="Controller.DirectorController"
           />
     <bean name="formatoController"
           class="Controller.FormatoController"

@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
     <link rel="stylesheet" href="assets/css/smoothproducts.css">
-        <title>Lista Formato Película</title>
+        <title>Lista Director Película</title>
     </head>
     <%@include file="../header.jsp" %> 
 
@@ -25,7 +25,7 @@
         <div class="container mt-4">
             <div class="card border-info">
                 <div class="card-header bg-dark text-white">
-                    <a class="btn btn-success" href="<c:url value="/admin/formato/agregarFormato.htm"/>">Nuevo Registro Formato Pelicula</a>
+                    <a class="btn btn-success" href="<c:url value="/admin/director/agregarDirector.htm"/>">Nuevo Registro Director Pelicula</a>
                 </div>
                 <div class="card-body">
                     <table class="table">
@@ -40,12 +40,12 @@
                         <tbody>
                             <c:forEach var="dato" items="${lista}">
                             <tr>
-                                <td>${dato.FOR_ID}</td>
-                                <td >${dato.FOR_NOMBRE}</td>
+                                <td>${dato.DIR_ID}</td>
+                                <td >${dato.DIR_NOMBRE}</td>
                               
                                 <td>
-                                    <a href="editarFormato.htm?id=${dato.FOR_ID}" class="btn btn-primary ">Edit</a>
-                                    <a href="eliminarFormato.htm?id=${dato.FOR_ID}" class="btn btn-primary ">Delete</a>
+                                    <a href="editarDirector.htm?id=${dato.DIR_ID}" class="btn btn-primary ">Edit</a>
+                                    <a href="eliminarDirector.htm?id=${dato.DIR_ID}" class="btn btn-primary ">Delete</a>
                                     
                                 </td>
                             </tr>
