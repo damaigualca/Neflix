@@ -3,8 +3,10 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
+    
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
         <link rel="icon" type="image/png" sizes="25x25" href="<c:url value="/assets/img/stickeroid_5bf5461d4e179-3.png"/>">
         <link rel="icon" type="image/png" sizes="35x35" href="<c:url value="/assets/img/stickeroid_5bf5461d4e179-4.png"/>">
         <title>Agregar Socio</title>
@@ -20,7 +22,7 @@
                 <div class="card-body">
                     <form method="POST">
 
-                       <label>Nombre</label>
+                        <label>Nombre</label>
                         <input type="text" name="nombre" class="form-control">
                         <label>Género</label>
                         <select class="browser-default custom-select" name="genero">
@@ -40,12 +42,30 @@
                                 <option name="formato" value="${categoryF.FOR_ID}">${categoryF.FOR_NOMBRE}</option>
                             </c:forEach>
                         </select> 
-                         
+
                         <label>Costo</label>
                         <input type="text" name="costo" class="form-control">
                         <label>Fecha de Estreno</label>
-                        <input type="text" name="fecha_estreno" class="form-control">
                         
+                        <div class="container">
+                            <div class="row">
+                                <div class='col-sm-6'>
+                                    <div class="form-group">
+                                        <div class='input-group date' id='datetimepicker1'>
+                                            <input type='text' name="fecha_estreno" class="form-control" />
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-calendar"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script type="text/javascript">
+                                    $(function () {
+                                        $('#datetimepicker1').datetimepicker();
+                                    });
+                                </script>
+                            </div>
+                        </div>
                         <br><br>
                         <input type="submit" value="Agregar" class="btn btn-success">
                         <a class="btn btn-dark" href="<c:url value="/admin/pelicula/listaPelicula.htm"/>"> Regresar</a>
