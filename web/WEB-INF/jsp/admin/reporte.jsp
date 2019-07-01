@@ -15,4 +15,19 @@
            <table class="table">
                         <thead class="thead-dark">
                             <tr>
-                    
+                                <th scope="row">Peli</th>
+                                <th scope="row">Socio</th>
+                                
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <c:forEach var="datopelfecha" items="${listaFechaAlquiler}">
+                            <tr>
+                                <td>${datopelfecha.pelicula}</td>
+                                <td>${datopelfecha.socio}</td>
+                                
+                            </tr>
+                             </c:forEach>
+             </tbody>
+    </body>
+</html>
