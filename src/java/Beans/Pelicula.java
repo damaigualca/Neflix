@@ -5,6 +5,9 @@
  */
 package Beans;
 
+import com.mysql.jdbc.Blob;
+import java.awt.Image;
+import java.io.File;
 import java.util.Date;
 
 /**
@@ -20,11 +23,21 @@ public class Pelicula implements Actions{
     private String genero;
     private String formato;
     private String director;
+    private String imagen;
 
     public String getGenero() {
         return genero;
     }
 
+    public String getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
+    }
+
+  
     public void setGenero(String genero) {
         this.genero = genero;
     }
@@ -56,11 +69,12 @@ public class Pelicula implements Actions{
     public Pelicula() {
     }
 
-    public Pelicula(int id, String nombre, double costo, String fecha_estreno) {
+    public Pelicula(int id, String nombre, double costo, String fecha_estreno, String imagen) {
         this.id = id;
         this.nombre = nombre;
         this.costo = costo;
         this.fecha_estreno = fecha_estreno;
+        this.imagen = imagen;
     }
 
     public int getId() {
@@ -97,7 +111,7 @@ public class Pelicula implements Actions{
 
     @Override
     public void agregar() {
-        sql="insert into pelicula(GEN_ID,DIR_ID,FOR_ID,PEL_NOMBRE,PEL_COSTO,PEL_FECHA_ESTRENO)values(?,?,?,?,?,?)";
+        sql="insert into pelicula(GEN_ID,DIR_ID,FOR_ID,PEL_NOMBRE,PEL_COSTO,PEL_FECHA_ESTRENO,PEL_IMG)values(?,?,?,?,?,?,?)";
     }
 
     @Override
@@ -112,7 +126,7 @@ public class Pelicula implements Actions{
 
     @Override
     public void update(int id) {
-        sql= "update  pelicula set GEN_ID=?,DIR_ID=?,FOR_ID=?,PEL_NOMBRE=?,PEL_COSTO=?,PEL_FECHA_ESTRENO=? where PEL_ID="+id;
+        sql= "update  pelicula set GEN_ID=?,DIR_ID=?,FOR_ID=?,PEL_NOMBRE=?,PEL_COSTO=?,PEL_FECHA_ESTRENO=?,PEL_IMG=? where PEL_ID="+id;
     }
 
     @Override

@@ -20,8 +20,7 @@
                     <h4>Agregar Nueva Película</h4>
                 </div>
                 <div class="card-body">
-                    <form method="POST">
-
+                    <form  method="POST">
                         <label>Nombre</label>
                         <input type="text" name="nombre" class="form-control">
                         <label>Género</label>
@@ -44,15 +43,14 @@
                         </select> 
 
                         <label>Costo</label>
-                        <input type="text" name="costo" class="form-control">
+                        <input type="number" name="costo" class="form-control">
                         <label>Fecha de Estreno</label>
-                        
                         <div class="container">
                             <div class="row">
                                 <div class='col-sm-6'>
                                     <div class="form-group">
                                         <div class='input-group date' id='datetimepicker1'>
-                                            <input type='text' name="fecha_estreno" class="form-control" />
+                                            <input type='date' name="fecha_estreno" class="form-control" />
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-calendar"></span>
                                             </span>
@@ -66,13 +64,12 @@
                                 </script>
                             </div>
                         </div>
+                        
+                        <label>Imagen</label>
+                        <input type="file" name="imagen" class="form-control">
                         <br><br>
                         <input type="submit" value="Agregar" class="btn btn-success">
                         <a class="btn btn-dark" href="<c:url value="/admin/pelicula/listaPelicula.htm"/>"> Regresar</a>
-
-
-
-
                     </form>
                 </div>
             </div>
