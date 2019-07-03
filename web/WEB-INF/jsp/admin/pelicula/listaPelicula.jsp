@@ -46,11 +46,11 @@
                             <c:forEach var="dato" items="${lista}">
                                 <tr>
                                     <td>${dato.PEL_ID}</td>
-                                    <td >${dato.GEN_ID}</td>
+                                    <td >${dato.GEN_NOMBRE}</td>
 
                                     <td>${dato.PEL_NOMBRE}</td>
-                                    <td>${dato.DIR_ID}</td>
-                                    <td >${dato.FOR_ID}</td>
+                                    <td>${dato.DIR_NOMBRE}</td>
+                                    <td >${dato.FOR_NOMBRE}</td>
 
                                     <td>${dato.PEL_COSTO}</td>
                                     <td>${dato.PEL_FECHA_ESTRENO}</td>

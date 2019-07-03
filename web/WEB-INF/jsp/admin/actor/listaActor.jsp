@@ -41,7 +41,7 @@
                             <c:forEach var="dato" items="${lista}">
                             <tr>
                                 <td>${dato.ACT_ID}</td>
-                                <td >${dato.SEX_ID}</td>
+                                <td >${dato.SEX_NOMBRE}</td>
                                
                                 <td>${dato.ACT_NOMBRE}</td>
                                 <td>

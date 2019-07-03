@@ -23,7 +23,7 @@
                     <form method="POST">
 
                         <label>Nombre</label>
-                        <input type="text" name="nombre" class="form-control">
+                        <input required type="text" name="nombre" class="form-control">
                         <label>Género</label>
                         <select class="browser-default custom-select" name="genero">
                             <c:forEach items="${listaG}" var="categoryG">
@@ -44,7 +44,7 @@
                         </select> 
 
                         <label>Costo</label>
-                        <input type="text" name="costo" class="form-control">
+                        <input required type="number" name="costo" class="form-control">
                         <label>Fecha de Estreno</label>
                         
                         <div class="container">
@@ -52,7 +52,7 @@
                                 <div class='col-sm-6'>
                                     <div class="form-group">
                                         <div class='input-group date' id='datetimepicker1'>
-                                            <input type='text' name="fecha_estreno" class="form-control" />
+                                            <input  required type='date' name="fecha_estreno" class="form-control" />
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-calendar"></span>
                                             </span>

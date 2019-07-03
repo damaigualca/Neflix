@@ -117,7 +117,7 @@ public class Pelicula implements Actions{
 
     @Override
     public void list() {
-        sql= "select * from pelicula";
+        sql= "SELECT p.PEL_ID, p.PEL_NOMBRE,p.PEL_COSTO,p.PEL_FECHA_ESTRENO,g.GEN_NOMBRE,d.DIR_NOMBRE,f.FOR_NOMBRE FROM pelicula p,genero g, formato f,director d WHERE p.GEN_ID=g.GEN_ID AND p.DIR_ID=d.DIR_ID AND p.FOR_ID=f.FOR_ID ";
     }
 
     @Override

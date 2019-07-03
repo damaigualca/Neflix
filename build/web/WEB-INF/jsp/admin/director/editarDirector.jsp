@@ -19,7 +19,7 @@
                     <form method="POST">
                         
                         <label>Nombre</label>
-                        <input type="text" name="nombre" class="form-control" value="${lista[0].DIR_NOMBRE}"><br>
+                        <input required type="text" name="nombre" class="form-control" value="${lista[0].DIR_NOMBRE}"><br>
                         
                         
                         <br><br>

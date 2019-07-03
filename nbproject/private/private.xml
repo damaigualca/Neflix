@@ -3,17 +3,24 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/src/java/Beans/Estadistica.java</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/pelicula/listaPelicula.jsp</file>
-            <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/src/java/Controller/DirectorController.java</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/src/java/Beans/Login.java</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/pelicula/agregarPelicula.jsp</file>
+            <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/dispatcher-servlet.xml</file>
+            <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/src/java/Controller/ActorController.java</file>
+            <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/estadisticas.jsp</file>
+            <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/src/java/Controller/FormatoController.java</file>
+            <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/src/java/Controller/EstadisticaController.java</file>
+            <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/reporte.jsp</file>
+            <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/indexAdmin.jsp</file>
+            <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/src/java/Controller/DirectorController.java</file>
+            <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/applicationContext.xml</file>
+            <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/src/java/Beans/Director.java</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/src/java/Beans/Actor.java</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/pelicula/editarPelicula.jsp</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/about-us.jsp</file>
-            <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/src/java/Controller/ActorController.java</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/actor/listaActor.jsp</file>
-            <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/estadisticas.jsp</file>
-            <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/src/java/Controller/FormatoController.java</file>
         </group>
     </open-files>
 </project-private>

@@ -21,7 +21,7 @@
                     <form method="POST">
                         
                         <label>Nombre</label>
-                        <input type="text" name="nombre" class="form-control" value="${listaQ[0].PEL_NOMBRE}">
+                        <input required type="text" name="nombre" class="form-control" value="${listaQ[0].PEL_NOMBRE}">
                         <label>Género</label>
                         <select class="browser-default custom-select" name="genero">
                             <c:forEach items="${listaG}" var="categoryG">
@@ -42,9 +42,9 @@
                         </select> 
                          
                         <label>Costo</label>
-                        <input type="text" name="costo" class="form-control" value="${listaQ[0].PEL_COSTO}">
+                        <input required type="text" name="costo" class="form-control" value="${listaQ[0].PEL_COSTO}">
                         <label>Fecha de Estreno</label>
-                        <input type="text" name="fecha_estreno" class="form-control" value="${listaQ[0].PEL_FECHA_ESTRENO}">
+                        <input required type="date" name="fecha_estreno" class="form-control" value="${listaQ[0].PEL_FECHA_ESTRENO}">
                         
                         <br><br>
                         <input type="submit" value="Actualizar" class="btn btn-success" >

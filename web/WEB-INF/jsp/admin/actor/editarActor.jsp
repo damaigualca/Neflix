@@ -21,7 +21,7 @@
                     <form method="POST">
                         
                         <label>Nombre</label>
-                        <input type="text" name="nombre" class="form-control" value="${lista[0].ACT_NOMBRE}"><br>
+                        <input type="text" name="nombre" required class="form-control" value="${lista[0].ACT_NOMBRE}"><br>
                         <label>Sexo</label>
                          <select class="browser-default custom-select" name="sexo">
                             <c:forEach items="${listaS}" var="category">

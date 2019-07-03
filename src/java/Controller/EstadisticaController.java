@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Controller;
+
 import Beans.Estadistica;
 import Config.Conexion;
 import java.util.List;
@@ -21,44 +22,47 @@ import org.springframework.web.bind.annotation.RequestParam;
  */
 @Controller
 public class EstadisticaController {
-  Conexion con= new Conexion();
-  JdbcTemplate jdbcTemplate= new  JdbcTemplate(con.Conectar());
-  ModelAndView mav= new ModelAndView();
-  List datos;
-  @RequestMapping(value =  "/admin/estadisticas.htm", method = RequestMethod.GET )
-    public ModelAndView SocioAlquiler(Estadistica s){
-        
+
+    Conexion con = new Conexion();
+    JdbcTemplate jdbcTemplate = new JdbcTemplate(con.Conectar());
+    ModelAndView mav = new ModelAndView();
+    List datos;
+    
+    @RequestMapping(value = "/admin/estadisticas.htm", method = RequestMethod.GET)
+    public ModelAndView SocioAlquiler(Estadistica s) {
+
         s.EstadisticaSocioAlquiler();
-        String sql= s.getSql();
-        datos= this.jdbcTemplate.queryForList(sql);
-        System.out.println(datos);
-        mav.addObject("lista",datos);
+        String sql = s.getSql();
+        datos = this.jdbcTemplate.queryForList(sql);
         
+        mav.addObject("lista", datos);
+
         s.EstadisticaPeliculaAlquiler();
-        String sql1= s.getSql();
-        datos= this.jdbcTemplate.queryForList(sql1);
-        mav.addObject("listaPeli",datos);
-        
+        String sql1 = s.getSql();
+        datos = this.jdbcTemplate.queryForList(sql1);
+        mav.addObject("listaPeli", datos);
+
         s.EstadisticaCostoPeliculas();
-        String sql2= s.getSql();
-        datos= this.jdbcTemplate.queryForList(sql2);
-        mav.addObject("listaPeliCosto",datos);
+        String sql2 = s.getSql();
+        datos = this.jdbcTemplate.queryForList(sql2);
+        mav.addObject("listaPeliCosto", datos);
         mav.setViewName("admin/estadisticas");
         return mav;
     }
-    @RequestMapping(value =  "/admin/estadisticas.htm", method = RequestMethod.POST )
-  public ModelAndView SocioAlquiler(
-          HttpServletRequest s,
-          Estadistica sa){
-      
-      sa.EstadisticaFechaAlquiler();
-       String sql2= sa.getSql();
-        datos= this.jdbcTemplate.queryForList(sql2);
-        mav.addObject("listaFechaAlquiler",datos);
-        return new ModelAndView("redirect:/admin/reporte.htm") ;
-    
-       
-      
-  }
-  
+
+    @RequestMapping(value = "/admin/estadisticas.htm", method = RequestMethod.POST)
+    public ModelAndView SocioAlquiler1( Estadistica sa
+            ) {
+
+        sa.EstadisticaFechaAlquiler();
+        String sql2 = sa.getSql();
+        datos = this.jdbcTemplate.queryForList(sql2);
+        System.out.println(datos);
+        mav.addObject("listaFechaAlquiler", datos);
+        mav.setViewName("admin/estadisticas");
+        return mav;
+        
+
+    }
+
 }

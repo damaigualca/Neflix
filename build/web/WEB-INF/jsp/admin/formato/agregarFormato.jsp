@@ -21,7 +21,7 @@
                     <form method="POST">
 
                         <label>Nombre</label>
-                        <input type="text" name="nombre" class="form-control">
+                        <input required type="text" name="nombre" class="form-control">
                            
                          
 

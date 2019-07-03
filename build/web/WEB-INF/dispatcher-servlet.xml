@@ -24,9 +24,8 @@
             <props>
                  <prop key="index.htm">indexController</prop>
                  <prop key="/admin/indexAdmin.htm">indexAdminController</prop>
-                 <prop key="/admin/reporte.htm">estadisticasController</prop>
-                 
                  <prop key="/admin/estadisticas.htm">estadisticasController</prop>
+                 <prop key="/admin/reporte.htm">estadisticasController</prop>
                  <prop key="catalog-page.htm">catalogo</prop>
                  <prop key="/admin/actor/listaActor.htm">actorController</prop>
                  <prop key="/admin/actor/agregarActor.htm">actorController</prop>

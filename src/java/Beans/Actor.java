@@ -79,7 +79,9 @@ public class Actor implements Actions{
 
     @Override
     public void list() {
-        sql= "select * from actor";
+        //sql= "select * from actor";
+        sql= "SELECT a.ACT_ID, a.ACT_NOMBRE,x.sex_nombre FROM actor a,sexo x WHERE a.sex_id=x.sex_id ";
+        
     }
    @Override
    public void select(String columna){
