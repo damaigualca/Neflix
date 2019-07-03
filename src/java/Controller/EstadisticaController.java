@@ -30,7 +30,7 @@ public class EstadisticaController {
     
     @RequestMapping(value = "/admin/estadisticas.htm", method = RequestMethod.GET)
     public ModelAndView SocioAlquiler(Estadistica s) {
-
+        mav.clear();
         s.EstadisticaSocioAlquiler();
         String sql = s.getSql();
         datos = this.jdbcTemplate.queryForList(sql);
@@ -42,6 +42,11 @@ public class EstadisticaController {
         datos = this.jdbcTemplate.queryForList(sql1);
         mav.addObject("listaPeli", datos);
 
+        s.EstadisticaAlquiler();
+        String sql3 = s.getSql();
+        datos = this.jdbcTemplate.queryForList(sql3);
+        mav.addObject("listaAlq", datos);
+        
         s.EstadisticaCostoPeliculas();
         String sql2 = s.getSql();
         datos = this.jdbcTemplate.queryForList(sql2);
@@ -53,6 +58,7 @@ public class EstadisticaController {
     @RequestMapping(value = "/admin/estadisticas.htm", method = RequestMethod.POST)
     public ModelAndView SocioAlquiler1( Estadistica sa
             ) {
+        
 
         sa.EstadisticaFechaAlquiler();
         String sql2 = sa.getSql();

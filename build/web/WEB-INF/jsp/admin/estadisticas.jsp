@@ -144,8 +144,8 @@
         </table>
         <br>
         <form method="POST">
-            <input type="date" name="desde"   >
-            <input type="date" name="hasta"  >
+            <input type="date" name="desde" value="${listaFechaAlquiler[0].fecha}"  >
+            <input type="date" name="hasta"  value="${listaFechaAlquiler[0].fecha1}">
             <input type="submit" name="buscar">
 
         </form>

@@ -55,6 +55,9 @@ public class Estadistica {
     public void EstadisticaPeliculaAlquiler() {
         sql = "SELECT p.pel_nombre AS pelicula, COUNT( * ) AS num FROM alquiler a, pelicula p WHERE p.pel_id = a.pel_id GROUP BY a.pel_id";
     }
+    public void EstadisticaAlquiler() {
+        sql = "SELECT * from alquiler";
+    }
 
     //muestra el valor total de cada pelicula
     public void EstadisticaCostoPeliculas() {
@@ -65,7 +68,7 @@ public class Estadistica {
     }
 
     public void EstadisticaFechaAlquiler() {
-        sql = "SELECT p.pel_nombre AS pelicula, s.soc_nombre AS socio, a.alq_fecha_desde AS fecha, a.alq_valor\n"
+        sql = "SELECT p.pel_nombre AS pelicula, s.soc_nombre AS socio, a.alq_fecha_desde AS fecha, a.alq_fecha_hasta AS fecha1 , a.alq_valor\n"
                 + "FROM alquiler a, pelicula p, socio s\n"
                 + "WHERE p.pel_id = a.pel_id\n"
                 + "AND a.soc_id = s.soc_id\n"
