@@ -17,28 +17,11 @@
                     type: "pie",
                     data: {
                         datasets: [{
-                                data: [
-                                    5,
-                                    10,
-                                    40,
-                                    12,
-                                    23,
-                                ],
-                                backgroundColor: [
-                                    "#F7464A",
-                                    "#46BFBD",
-                                    "#FDB45C",
-                                    "#949FB1",
-                                    "#4D5360",
-                                ],
+                                data: data: ${valor}
+                           
                             }],
-                        labels: [
-                            "Datos 1",
-                            "Datos 2",
-                            "Datos 3",
-                            "Datos 4",
-                            "Datos 5",
-                        ]
+                        labels: ${label}
+                        
                     },
                     options: {
                         responsive: true,
@@ -47,31 +30,6 @@
 
                 var canvas = document.getElementById('chart').getContext('2d');
                 window.pie = new Chart(canvas, datos);
-
-                setInterval(function () {
-                    datos.data.datasets.splice(0);
-                    var newData = {
-                        backgroundColor: [
-                            "#F7464A",
-                            "#46BFBD",
-                            "#FDB45C",
-                            "#949FB1",
-                            "#4D5360",
-                        ],
-                        data: [getRandom(), getRandom(), getRandom(), getRandom(), getRandom()]
-                    };
-
-                    datos.data.datasets.push(newData);
-
-                    window.pie.update();
-
-                }, 5000);
-
-
-
-                function getRandom() {
-                    return Math.round(Math.random() * 100);
-                }
 
 
             });
@@ -86,24 +44,6 @@
             <canvas id="chart" width="500" height="350"></canvas>
         </div>
 
-        <table class="table">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="row">socio</th>
-                    <th scope="row">num</th>
-
-                </tr>
-            </thead>
-            <tbody>
-                <c:forEach var="dato" items="${lista}">
-                    <tr>
-                        <td>${dato.socio}</td>
-                        <td>${dato.num}</td>
-
-                    </tr>
-                </c:forEach>
-            </tbody>
-        </table>
 
         <br><br>
         <table class="table">

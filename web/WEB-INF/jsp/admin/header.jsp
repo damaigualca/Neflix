@@ -26,6 +26,7 @@
                     <li class="nav-item" role="presentation"><a class="nav-link" href="/Neflix/admin/pelicula/listaPelicula.htm">PELÍCULAS</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="/Neflix/admin/formato/listaFormato.htm">FORMATOS</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="/Neflix/admin/genero/listaGenero.htm">GÉNEROS</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="/Neflix/admin/alquoler/listaAlquiler.htm">Alquiler</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="/Neflix/admin/socio/listaSocio.htm">SOCIOS</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="/Neflix/admin/director/listaDirector.htm">DIRECTORES</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="/Neflix/admin/actor/listaActor.htm">ACTORES</a></li>

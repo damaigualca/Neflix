@@ -6,7 +6,10 @@
 package Controller;
 
 import Beans.Estadistica;
+import Beans.MaperReporte;
+import Beans.Reporte;
 import Config.Conexion;
+import java.util.Arrays;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -36,11 +39,24 @@ public class EstadisticaController {
         datos = this.jdbcTemplate.queryForList(sql);
         
         mav.addObject("lista", datos);
-
+        
+        
         s.EstadisticaPeliculaAlquiler();
         String sql1 = s.getSql();
-        datos = this.jdbcTemplate.queryForList(sql1);
-        mav.addObject("listaPeli", datos);
+        
+        List <Reporte> lista = this.jdbcTemplate.query(sql, new MaperReporte());
+        String[] labels = new String[lista.size()];
+        double[] valores = new double[lista.size()];
+         for (int i = 0; i < lista.size(); i++) {
+                labels[i] = "'"+lista.get(i).getLabel()+"'";
+                valores[i] = lista.get(i).getValor();
+            }
+        
+        mav.addObject("label", Arrays.toString(labels));
+        mav.addObject("valor", Arrays.toString(valores));
+        
+
+        
 
         s.EstadisticaAlquiler();
         String sql3 = s.getSql();

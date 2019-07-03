@@ -28,7 +28,7 @@
                     <a class="btn btn-success" href="<c:url value="/admin/actor/agregarActor.htm"/>">Nuevo Registro Actor</a>
                 </div>
                 <div class="card-body">
-                    <table class="table" >
+                    <table id="table-actor" class="table" >
                         <thead class="thead-dark">
                             <tr>
                                 <th scope="row">ID</th>
@@ -54,7 +54,11 @@
                         </tbody>
                     </table>
                            
-
+                    <script>
+                        $(document).ready( function () {
+    $('#table-actor').DataTable();
+} );
+                    </script>
                 </div>
             </div>
         </div>

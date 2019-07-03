@@ -9,7 +9,7 @@ package Beans;
  *
  * @author Luis Carlos
  */
-public class Alquiler { 
+public class Alquiler implements Actions{ 
     private int id;
     private String socio;
     private String pelicula;
@@ -99,5 +99,30 @@ public class Alquiler {
     
     public void agregar() {
         sql="insert into alquiler(SOC_ID,PEL_ID,ALQ_FECHA_DESDE,ALQ_FECHA_HASTA,ALQ_VALOR,ALQ_FECHA_ENTREGA)values(?,?,?,?,?,?)";
+    }
+
+    @Override
+    public void delete(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void edit(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void update(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void list() {
+         sql= " SELECT a.ALQ_ID,s.SOC_NOMBRE, p.PEL_NOMBRE, p.PEL_IMG ,a.ALQ_FECHA_DESDE,a.ALQ_FECHA_HASTA,a.ALQ_VALOR,a.ALQ_FECHA_ENTREGA FROM pelicula p,alquiler a,socio s WHERE a.SOC_ID=s.SOC_ID AND a.PEL_ID=p.PEL_ID  ";
+    }
+
+    @Override
+    public void select(String columna) {
+        sql= "select * from alquiler";
     }
 }

@@ -27,14 +27,14 @@
                             </c:forEach>
                         </select> 
                         <label>Valor de alquiler:</label>
-                        <input type="number" name="valor" class="form-control" value="${listaQ[0].PEL_COSTO}">
+                        <input required type="number" name="valor" class="form-control" value="${listaQ[0].PEL_COSTO}">
                         <label>Fecha inicio de alquiler:</label>
                         <div class="container">
                             <div class="row">
                                 <div class='col-sm-6'>
                                     <div class="form-group">
                                         <div class='input-group date' id='datetimepicker1'>
-                                            <input type='date' name="fecha_inicio" class="form-control" />
+                                            <input required type='date' name="fecha_inicio" class="form-control" />
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-calendar"></span>
                                             </span>
@@ -54,7 +54,7 @@
                                 <div class='col-sm-6'>
                                     <div class="form-group">
                                         <div class='input-group date' id='datetimepicker1'>
-                                            <input type='date' name="fecha_fin" class="form-control" />
+                                            <input required type='date' name="fecha_fin" class="form-control" />
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-calendar"></span>
                                             </span>
@@ -74,7 +74,7 @@
                                 <div class='col-sm-6'>
                                     <div class="form-group">
                                         <div class='input-group date' id='datetimepicker1'>
-                                            <input type='date' name="fecha_entrega" class="form-control" />
+                                            <input  type='date' name="fecha_entrega" class="form-control" />
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-calendar"></span>
                                             </span>
