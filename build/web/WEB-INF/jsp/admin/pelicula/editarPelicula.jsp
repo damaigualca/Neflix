@@ -44,15 +44,17 @@
                         <label>Costo</label>
                         <input required type="text" name="costo" class="form-control" value="${listaQ[0].PEL_COSTO}">
                         <label>Fecha de Estreno</label>
+
                         <input required type="date" name="fecha_estreno" class="form-control" value="${listaQ[0].PEL_FECHA_ESTRENO}">
                         
+
+                        
+                        <label>Imagen</label>
+                        <input type="file" name="imagen" class="form-control">
+
                         <br><br>
                         <input type="submit" value="Actualizar" class="btn btn-success" >
-                        <a class="btn btn-dark" href="<c:url value="/admin/pelicula/listaPelicula.htm"/>"> Regresar</a>
-                            
-                            
-                            
-                            
+                        <a class="btn btn-dark" href="<c:url value="/admin/pelicula/listaPelicula.htm"/>"> Regresar</a>  
                     </form>
                 </div>
             </div>

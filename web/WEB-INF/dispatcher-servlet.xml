@@ -35,6 +35,8 @@
                  <prop key="/admin/pelicula/agregarPelicula.htm">peliController</prop>
                  <prop key="/admin/pelicula/editarPelicula.htm">peliController</prop>
                  <prop key="/admin/pelicula/eliminarPelicula.htm">peliController</prop>
+                 <prop key="/admin/pelicula/alquilarPelicula.htm">peliController</prop>
+                 <prop key="/admin/pelicula/guardarPelicula.htm">peliController</prop>
                  <prop key="/admin/formato/listaFormato.htm">formatoController</prop>
                  <prop key="/admin/formato/agregarFormato.htm">formatoController</prop>
                  <prop key="/admin/formato/editarFormato.htm">formatoController</prop>

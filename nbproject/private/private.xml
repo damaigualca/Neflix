@@ -9,12 +9,10 @@
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/src/java/Beans/Login.java</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/pelicula/agregarPelicula.jsp</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/header.jsp</file>
-            <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/src/java/Beans/Genero.java</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/dispatcher-servlet.xml</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/src/java/Controller/ActorController.java</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/indexAdmin.jsp</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/src/java/Controller/DirectorController.java</file>
-            <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/genero/agregarGenero.jsp</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/pelicula/editarPelicula.jsp</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/actor/listaActor.jsp</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/actor/editarActor.jsp</file>
@@ -25,16 +23,13 @@
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/src/java/Controller/FormatoController.java</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/src/java/Controller/EstadisticaController.java</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/reporte.jsp</file>
-            <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/src/java/Controller/GeneroController.java</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/applicationContext.xml</file>
-            <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/genero/editarGenero.jsp</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/src/java/Beans/Director.java</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/formato/editarFormato.jsp</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/actor/agregarActor.jsp</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/src/java/Beans/Actor.java</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/about-us.jsp</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/director/agregarDirector.jsp</file>
-            <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/genero/listaGenero.jsp</file>
         </group>
     </open-files>
 </project-private>

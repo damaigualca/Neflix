@@ -39,7 +39,9 @@
                                 <th scope="row">Formato</th>
                                 <th scope="row">Costo</th>
                                 <th scope="row">Fecha de Estreno</th>
-                                <th scope="row">Acciones</th>
+                         
+                                <th scope="row">Imagen</h>
+                                           <th scope="row">Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -54,10 +56,10 @@
 
                                     <td>${dato.PEL_COSTO}</td>
                                     <td>${dato.PEL_FECHA_ESTRENO}</td>
+                                   <td><img src="../../assets/img/${dato.PEL_IMG}" width="140" height="180" /></td>
                                     <td>
                                         <a href="editarPelicula.htm?id=${dato.PEL_ID}" class="btn btn-primary ">Edit</a>
                                         <a href="eliminarPelicula.htm?id=${dato.PEL_ID}" class="btn btn-primary ">Delete</a>
-
                                     </td>
                                 </tr>
                             </c:forEach>
