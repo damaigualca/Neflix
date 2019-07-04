@@ -28,7 +28,7 @@
                     <a class="btn btn-success" href="<c:url value="/admin/genero/agregarGenero.htm"/>">Nuevo Registro Género Pelicula</a>
                 </div>
                 <div class="card-body">
-                    <table class="table">
+                    <table id="table_genero" class="table">
                         <thead class="thead-dark">
                             <tr>
                                 <th scope="row">ID</th>

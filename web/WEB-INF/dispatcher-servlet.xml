@@ -31,6 +31,7 @@
                  <prop key="/admin/actor/agregarActor.htm">actorController</prop>
                  <prop key="/admin/actor/editarActor.htm">actorController</prop>
                  <prop key="/admin/actor/eliminarActor.htm">actorController</prop>
+                 <prop key="/admin/actor/tabla.htm">actor1Controller</prop>
                  <prop key="/admin/pelicula/listaPelicula.htm">peliController</prop>
                  <prop key="/admin/pelicula/agregarPelicula.htm">peliController</prop>
                  <prop key="/admin/pelicula/editarPelicula.htm">peliController</prop>
@@ -77,6 +78,9 @@
     <bean name="alqController"
           class="Controller.AlquilerController"
           />
+    <bean name="actor1Controller"
+           class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="/admin/actor/tabla" />
     <bean name="generoController"
           class="Controller.GeneroController"
           />

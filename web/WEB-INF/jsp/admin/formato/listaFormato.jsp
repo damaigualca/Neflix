@@ -27,8 +27,8 @@
                 <div class="card-header bg-dark text-white">
                     <a class="btn btn-success" href="<c:url value="/admin/formato/agregarFormato.htm"/>">Nuevo Registro Formato Pelicula</a>
                 </div>
-                <div class="card-body">
-                    <table class="table">
+                <div  class="card-body">
+                    <table id="table_formato" class="table">
                         <thead class="thead-dark">
                             <tr>
                                 <th scope="row">ID</th>

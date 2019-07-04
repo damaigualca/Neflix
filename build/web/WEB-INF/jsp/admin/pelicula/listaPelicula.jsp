@@ -29,7 +29,7 @@
                     <a class="btn btn-success" href="<c:url value="/admin/pelicula/agregarPelicula.htm"/>">Nuevo Registro Pelicula</a>
                 </div>
                 <div class="card-body">
-                    <table class="table">
+                    <table id="table_pelicula" class="table">
                         <thead class="thead-dark">
                             <tr>
                                 <th scope="row">ID</th>

@@ -27,7 +27,7 @@
             <div class="card border-info">
                 
                 <div class="card-body">
-                    <table class="table">
+                    <table id="table_alquiler" class="table">
                         <thead class="thead-dark">
                             <tr>
                                 <th scope="row">ID</th>

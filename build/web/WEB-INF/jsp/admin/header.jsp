@@ -10,10 +10,15 @@
         <link rel="icon" type="image/png" sizes="25x25" href="<c:url value="/assets/img/stickeroid_5bf5461d4e179-3.png"/>">
         <link rel="icon" type="image/png" sizes="35x35" href="<c:url value="/assets/img/stickeroid_5bf5461d4e179-4.png"/>">
     <link rel="stylesheet" href="<c:url value="/assets/bootstrap/css/bootstrap.min.css"/>">
+    
     <link rel="stylesheet" href=" https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
     <link rel="stylesheet" href="<c:url value="/assets/fonts/simple-line-icons.min.css"/>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
     <link rel="stylesheet" href="<c:url value="/assets/css/smoothproducts.css"/>">
+    <link rel="stylesheet"   href="<c:url value="/assets/css/datatables.min.css"/>"/>
+    <link rel="stylesheet"  href="<c:url value="/assets/js/datatables.min.js"/>"/>
+    <link rel="stylesheet"  href="<c:url value="/assets/js/datatables.js"/>"/>
+    <link rel="stylesheet"  href="<c:url value="/assets/css/datatables.css"/>"/>
     </head>
     <body>
         <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
@@ -36,5 +41,7 @@
         </div>
         </div>
     </nav>
+            
     </body>
+    
 </html>

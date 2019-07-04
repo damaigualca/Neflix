@@ -98,4 +98,9 @@ public class ActorController {
         
         return new ModelAndView("redirect:/admin/actor/listaActor.htm") ;
     }
+    @RequestMapping(value =  "/admin/actor/tabla.htm", method = RequestMethod.GET )
+    public ModelAndView Lis(Actor a){   
+        
+        return mav;
+    }
 }

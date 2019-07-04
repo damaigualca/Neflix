@@ -9,11 +9,13 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="icon" type="image/png" sizes="25x25" href="<c:url value="/assets/img/stickeroid_5bf5461d4e179-3.png"/>">
         <link rel="icon" type="image/png" sizes="35x35" href="<c:url value="/assets/img/stickeroid_5bf5461d4e179-4.png"/>">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
-    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
-    <link rel="stylesheet" href="assets/css/smoothproducts.css">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+        <
+
+
         <title>Lista Actores</title>
     </head>
     <%@include file="../header.jsp" %> 
@@ -24,11 +26,14 @@
         <br>
         <div class="container mt-4">
             <div class="card border-info">
+                <br><br>
                 <div class="card-header bg-dark text-white">
                     <a class="btn btn-success" href="<c:url value="/admin/actor/agregarActor.htm"/>">Nuevo Registro Actor</a>
                 </div>
                 <div class="card-body">
-                    <table id="table-actor" class="table" >
+
+
+                    <table id="table_actor"  class="table" >
                         <thead class="thead-dark">
                             <tr>
                                 <th scope="row">ID</th>
@@ -39,31 +44,27 @@
                         </thead>
                         <tbody>
                             <c:forEach var="dato" items="${lista}">
-                            <tr>
-                                <td>${dato.ACT_ID}</td>
-                                <td >${dato.SEX_NOMBRE}</td>
-                               
-                                <td>${dato.ACT_NOMBRE}</td>
-                                <td>
-                                    <a href="editarActor.htm?id=${dato.ACT_ID}" class="btn btn-primary ">Edit</a>
-                                    <a href="eliminarActor.htm?id=${dato.ACT_ID}" class="btn btn-primary ">Delete</a>
-                                    
-                                </td>
-                            </tr>
-                             </c:forEach>
+                                <tr>
+                                    <td>${dato.ACT_ID}</td>
+                                    <td >${dato.SEX_NOMBRE}</td>
+
+                                    <td>${dato.ACT_NOMBRE}</td>
+                                    <td>
+                                        <a href="editarActor.htm?id=${dato.ACT_ID}" class="btn btn-primary ">Edit</a>
+                                        <a href="eliminarActor.htm?id=${dato.ACT_ID}" class="btn btn-primary ">Delete</a>
+
+                                    </td>
+                                </tr>
+                            </c:forEach>
                         </tbody>
                     </table>
-                           
-                    <script>
-                        $(document).ready( function () {
-    $('#table-actor').DataTable();
-} );
-                    </script>
                 </div>
             </div>
         </div>
         <br><br>
+
+
         <%@include file="../footer.jsp" %> 
-        
+
     </body>
 </html>

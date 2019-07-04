@@ -28,7 +28,7 @@
                     <a class="btn btn-success" href="<c:url value="/admin/socio/agregarSocio.htm"/>">Nuevo Registro Socio</a>
                 </div>
                 <div class="card-body">
-                    <table class="table">
+                    <table id="table_socio" class="table">
                         <thead class="thead-dark">
                             <tr>
                                 <th scope="row">ID</th>

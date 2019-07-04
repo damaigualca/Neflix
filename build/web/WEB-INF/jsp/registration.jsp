@@ -28,8 +28,32 @@
                     <div class="form-group"><label for="email">Email</label><input class="form-control item" type="email" id="email"></div><button class="btn btn-primary btn-block" type="submit">Sign Up</button></form>
             </div>
         </section>
+        <section>
+            <table id="table_ad" class="table-dark">
+                <thead>
+                    <tr>
+                        <th>1</th>
+                        <th>3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>d</td>
+                        <td>s</td>
+                    </tr>
+                    <tr>
+                        <td>d</td>
+                        <td>d</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
     </main>
     <%@include file="footer.jsp" %> 
+     <script src="<c:url value="/assets/js/datatables.min.js"/>"></script>
+        <script src="<c:url value="/assets/js/datatables.js"/>"></script>
+        <script src="<c:url value="/assets/js/fuction.js"/>"></script>
 </body>
 
 </html>

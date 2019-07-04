@@ -28,7 +28,7 @@
                     <a class="btn btn-success" href="<c:url value="/admin/director/agregarDirector.htm"/>">Nuevo Registro Director Pelicula</a>
                 </div>
                 <div class="card-body">
-                    <table class="table">
+                    <table id="table_director" class="table">
                         <thead class="thead-dark">
                             <tr>
                                 <th scope="row">ID</th>
