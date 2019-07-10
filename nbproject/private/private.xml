@@ -10,15 +10,17 @@
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/header.jsp</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/dispatcher-servlet.xml</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/assets/js/Chart.bundle.js</file>
-            <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/actor/tabla.jsp</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/src/java/Controller/ActorController.java</file>
+            <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/assets/bootstrap/css/bootstrap.min.css</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/src/java/Controller/PeliculaController.java</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/src/java/Beans/Alquiler.java</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/director/listaDirector.jsp</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/footer.jsp</file>
+            <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/formato/listaFormato.jsp</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/actor/listaActor.jsp</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/pelicula/alquilarPelicula.jsp</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/assets/js/fuction.js</file>
+            <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/assets/css/datatables.min.css</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/src/java/Beans/Pelicula.java</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/footer.jsp</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/alquoler/listaAlquiler.jsp</file>
@@ -26,11 +28,14 @@
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/src/java/Controller/EstadisticaController.java</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/src/java/Controller/AlquilerController.java</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/src/java/Beans/MaperReporte.java</file>
+            <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/socio/listaSocio.jsp</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/header.jsp</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/actor/agregarActor.jsp</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/registration.jsp</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/assets/css/smoothproducts.css</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/src/java/Beans/Reporte.java</file>
+            <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/WEB-INF/jsp/admin/genero/listaGenero.jsp</file>
+            <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/assets/js/datatables.min.js</file>
             <file>file:/C:/Users/PC/Documents/NetBeansProjects/Neflix/web/assets/css/datatables.css</file>
         </group>
     </open-files>
