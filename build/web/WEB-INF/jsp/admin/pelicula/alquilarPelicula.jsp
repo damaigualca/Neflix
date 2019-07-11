@@ -28,39 +28,86 @@
             <div class="container">
                 <div class="block-heading">
                     <h2 class="text-info">Catálogo de Películas</h2>
-                    <p>Hola mira el contenido que tenemos para ti!</p>
+                    <p>Películas disponibles de alquiler!</p>
                 </div>
-                <div class="content">
-                          <div class="row">
-                               <div class="col-md-12">
-                                   <div class="products">
-                                <div class="row no-gutters">
+            <div class="card border-info">
+                <div class="card-header bg-dark text-white">
+                    <a href="guardarPelicula.htm?array=${array}" class="btn btn-primary ">Siguiente</a> 
+                    <a  onClick="contar();" class="btn btn-primary ">Contar</a>
+                </div>
+                 <div class="card-body">
+                    <table id="table_pelicula" class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="row">Género</th>
+                                <th scope="row">Nombre</th>
+                                <th scope="row">Director</th>
+                                <th scope="row">Formato</th>
+                                <th scope="row">Costo</th>
+                                <th scope="row">Fecha de Estreno</th>
+                                <th scope="row">Imagen</th>
+                                           <th scope="row">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                       <script type="text/javascript">
+                        //<![CDATA[
+                       var i = 1;
+                       var tamano = 0;
+                       var array = [];
+                        </script>
+                        <form id="form1">
                             <c:forEach var="dato" items="${lista}">
-                                      <div class="col-12 col-md-6 col-lg-4">
-                                        <div class="clean-product-item">
-                                            <div class="image"><a href="#"><img  src="../../assets/img/${dato.PEL_IMG}" width="150" height="400"></a></div>
-                                            <div class="product-name"><a href="#"><strong>${dato.PEL_NOMBRE}</strong></a></div>
-                                            <div class="about">
-                                                <div class="rating">Genero:${dato.GEN_NOMBRE}</div>
-                                                <div class="price">
-                                                    <h3>${dato.PEL_COSTO}</h3>
-                                                </div>
-                                            </div>
-                                            <p class="card-text">${dato.FOR_NOMBRE} - ${dato.DIR_NOMBRE} </p> 
-                                            <p class="card-text"><small class="text-muted">Fecha de estreno: ${dato.PEL_FECHA_ESTRENO}</small></p>
-                                            <a href="guardarPelicula.htm?id=${dato.PEL_ID}" class="btn btn-primary ">Alquilar</a>
+                                <tr>
+                                    <script type="text/javascript">
+                                        array[tamano] = ${dato.PEL_ID};
+                                        var i = i+1;
+                                        tamano = tamano+1;
+                                    </script>
+                                    <td >${dato.GEN_NOMBRE}</td>
+                                    <td>${dato.PEL_NOMBRE}</td>
+                                    <td>${dato.DIR_NOMBRE}</td>
+                                    <td >${dato.FOR_NOMBRE}</td>
+                                    <td>${dato.PEL_COSTO}</td>
+                                    <td>${dato.PEL_FECHA_ESTRENO}</td>
+                                   <td><img src="../../assets/img/${dato.PEL_IMG}" width="140" height="180" /></td>
+                                    <td>
+                                        <!-- <a href="editarPelicula.htm?id=${dato.PEL_ID}" class="btn btn-primary ">Alquilar</a> -->
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" name="checkbox"  type="checkbox" id="${dato.PEL_ID}" value="${dato.PEL_ID}">
+                                            <label class="form-check-label" for="inlineCheckbox1">Seleccionar</label>
                                         </div>
-                                    </div>
+                                    </td>
+                                </tr>
                             </c:forEach>
-                                </div>
-                                   </div>
-                               </div>
-                          </div>
+                        </form>
+                      
+                        </tbody>
+                    </table>
+                     <a href="guardarPelicula.htm?array=" class="btn btn-primary ">Siguiente</a> 
+
                 </div>
+            </div>
             </div>
         </section>
     </main>
         <%@include file="../footer.jsp" %> 
 
     </body>
+        <script type="text/javascript">
+            function contar() {
+                var array2 = [];
+                var aux2 = 0;
+                for (var i = 0; i<array.length;i++){
+                    if(document.getElementById(array[i]).checked){
+                        array2[aux2] = array[i];
+                        aux2 = aux2 + 1;
+                    }
+                }
+                if(array2[0] != null)
+                    location.href=href="guardarPelicula.htm?array="+array2
+                else
+                    alert("Selecciones al menos una pelicula!");
+            } 
+        </script>
 </html>

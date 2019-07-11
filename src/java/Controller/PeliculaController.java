@@ -112,10 +112,12 @@ public class PeliculaController {
     }
     
     @RequestMapping(value =  "/admin/pelicula/alquilarPelicula.htm", method = RequestMethod.GET )
-    public ModelAndView Alquilar(HttpServletRequest request,Pelicula p){
+    public ModelAndView Alquilar(Pelicula p){
+       
+    
         p.list();
         String sql= p.getSql();
-        List datos= this.jdbcTemplate.queryForList("SELECT p.PEL_ID,p.PEL_NOMBRE AS pelicula, p.PEL_COSTO, p.PEL_FECHA_ESTRENO, p.PEL_IMG,g.GEN_NOMBRE, d.DIR_NOMBRE, f.FOR_NOMBRE FROM pelicula p, genero g, director d, formato f WHERE p.GEN_ID=g.GEN_ID AND p.DIR_ID=d.DIR_ID AND p.FOR_ID=f.FOR_ID  ");
+        List datos= this.jdbcTemplate.queryForList("SELECT p.PEL_ID,p.PEL_NOMBRE AS PEL_NOMBRE, p.PEL_COSTO, p.PEL_FECHA_ESTRENO, p.PEL_IMG,g.GEN_NOMBRE, d.DIR_NOMBRE, f.FOR_NOMBRE FROM pelicula p, genero g, director d, formato f WHERE p.GEN_ID=g.GEN_ID AND p.DIR_ID=d.DIR_ID AND p.FOR_ID=f.FOR_ID  ");
         System.out.println(datos.toString());
         mav.addObject("lista",datos);
         mav.setViewName("admin/pelicula/alquilarPelicula");
@@ -124,23 +126,56 @@ public class PeliculaController {
     
     @RequestMapping(value="/admin/pelicula/guardarPelicula.htm", method=RequestMethod.GET)
     public ModelAndView Guardar(HttpServletRequest request){
-         id= Integer.parseInt(request.getParameter("id"));
-         datos= this.jdbcTemplate.queryForList("SELECT p.PEL_ID, p.PEL_COSTO, p.PEL_NOMBRE FROM pelicula p WHERE PEL_ID="+id);
-         mav.addObject("listaQ",datos);
+        int aux = 0;
+        String[] peliculas2 =  request.getParameterValues("array");
+        String validacion = "2";
+        if(request.getParameterValues("array")!=null){
+              System.out.println("entra");
+              String[] peliculas = request.getParameterValues("array");
+              
+             
+        for(String favorito: peliculas)
+            peliculas2 = favorito.split(",");
+           
+         for(String favorito: peliculas2){
+            if(aux == 0){
+                validacion = validacion + favorito;
+            }else{
+                validacion = validacion + " OR PEL_ID="+favorito;
+            }
+            aux++;
+         }
+            
+           datos= this.jdbcTemplate.queryForList("SELECT p.PEL_ID, p.PEL_COSTO, p.PEL_NOMBRE FROM pelicula p WHERE PEL_ID="+validacion);
+           System.out.println(validacion);
+           mav.addObject("lista",datos);
+        
+        
+         id= 1;
          pel_aux.select("socio");
          String sql2= pel_aux.getSql();
          datos2= this.jdbcTemplate.queryForList(sql2);
          mav.addObject("listaF",datos2);
-         mav.setViewName("admin/pelicula/guardarPelicula");
+         }  
+        mav.setViewName("admin/pelicula/guardarPelicula");
         return mav;
-         
     }
     @RequestMapping(value="/admin/pelicula/guardarPelicula.htm", method=RequestMethod.POST)
     public ModelAndView  Guardar(Alquiler p ){
+        
         p.agregar();
-        System.out.println(p.getSocio()+"Socio"+p.getFecha_entrega()+"fecha entre"+p.getFecha_inicio()+"fecha inicio");
-        String sql=p.getSql();
-       this.jdbcTemplate.update(sql, p.getSocio(),p.getPelicula(),p.getFecha_inicio(),p.getFecha_fin(),p.getValor(),p.getFecha_entrega()); 
+        String[] socio = p.getSocio().split(",");
+        String[] entrega = p.getFecha_entrega().split(",");
+        String[] inicio = p.getFecha_inicio().split(",");
+        String[] fin = p.getFecha_fin().split(",");
+        String[] pelicula = p.getPelicula().split(",");
+        String[] valor= p.getValor().split(",");
+        for(int i=0; i<socio.length;i++){
+            String sql=p.getSql();
+            this.jdbcTemplate.update(sql, socio[i],pelicula[i],inicio[i],fin[i],valor[i],null); 
+        }
+        //System.out.println(p.getSocio()+"Socio"+p.getFecha_entrega()+"fecha entre"+p.getFecha_inicio()+"fecha inicio"+p.getFecha_fin()+"fecha fin");
+       
         return new ModelAndView("redirect:/admin/pelicula/alquilarPelicula.htm") ;    
     }
     

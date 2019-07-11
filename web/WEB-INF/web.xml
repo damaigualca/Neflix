@@ -16,6 +16,15 @@
         <servlet-name>dispatcher</servlet-name>
         <url-pattern>*.htm</url-pattern>
     </servlet-mapping>
+     <servlet>
+        <servlet-name>ongetParameterValues</servlet-name>
+        <servlet-class>java4s.OngetParameterValues</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+            <servlet-name>ongetParameterValues</servlet-name>
+            <url-pattern>/admin/pelicula/guardarPelicula</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
