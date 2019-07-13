@@ -78,6 +78,10 @@
     <bean name="alqController"
           class="Controller.AlquilerController"
           />
+   
+    <bean name="apiPeliController"
+          class="Controller.PeliculaApiController"
+          />
     <bean name="actor1Controller"
            class="org.springframework.web.servlet.mvc.ParameterizableViewController"
           p:viewName="/admin/actor/tabla" />

@@ -112,7 +112,7 @@ public class PeliculaController {
     }
     
     @RequestMapping(value =  "/admin/pelicula/alquilarPelicula.htm", method = RequestMethod.GET )
-    public ModelAndView Alquilar(Pelicula p){
+    public ModelAndView Alquilar(HttpServletRequest request,Pelicula p){
        
     
         p.list();
@@ -128,11 +128,10 @@ public class PeliculaController {
     public ModelAndView Guardar(HttpServletRequest request){
         int aux = 0;
         String[] peliculas2 =  request.getParameterValues("array");
-        String validacion = "2";
+        String validacion = "";
         if(request.getParameterValues("array")!=null){
               System.out.println("entra");
               String[] peliculas = request.getParameterValues("array");
-              
              
         for(String favorito: peliculas)
             peliculas2 = favorito.split(",");
