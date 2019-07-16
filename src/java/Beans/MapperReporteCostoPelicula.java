@@ -13,16 +13,16 @@ import org.springframework.jdbc.core.RowMapper;
  *
  * @author LIBET
  */
-public class MaperReporte implements RowMapper<Reporte>{
-    
-    
+public class MapperReporteCostoPelicula implements RowMapper<Reporte> {
+
     @Override
     public Reporte mapRow(ResultSet rs, int i) throws SQLException {
     Reporte rep= new Reporte();
-    rep.setLabel(rs.getString("socio"));
-    rep.setValor(rs.getDouble("num"));
+   rep.setLabel(rs.getString("pelicula"));
+   rep.setValor(rs.getDouble("costo"));
+   
         return rep;
-    }
     
+    }
     
 }

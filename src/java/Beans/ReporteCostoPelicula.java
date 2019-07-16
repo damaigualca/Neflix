@@ -9,18 +9,18 @@ package Beans;
  *
  * @author LIBET
  */
-public class Reporte {
+public class ReporteCostoPelicula {
     private String label;
     private double valor;
 
-    public Reporte() {
+    public ReporteCostoPelicula() {
     }
 
-    public Reporte(String label, double valor) {
+    public ReporteCostoPelicula(String label, double valor) {
         this.label = label;
         this.valor = valor;
     }
-    
+
     public String getLabel() {
         return label;
     }
@@ -36,5 +36,7 @@ public class Reporte {
     public void setValor(double valor) {
         this.valor = valor;
     }
+
+   
     
 }

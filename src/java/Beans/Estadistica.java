@@ -14,6 +14,7 @@ public class Estadistica {
     private String sql;
     private String desde;
     private String hasta;
+    
 
     public Estadistica() {
     }
@@ -68,7 +69,7 @@ public class Estadistica {
     }
 
     public void EstadisticaFechaAlquiler() {
-        sql = "SELECT p.pel_nombre AS pelicula, s.soc_nombre AS socio, a.alq_fecha_desde AS fecha, a.alq_fecha_hasta AS fecha1 , a.alq_valor\n"
+        sql = "SELECT p.pel_nombre AS pelicula, s.soc_nombre AS socio, a.alq_fecha_desde AS fecha, a.alq_fecha_hasta AS fecha1 , a.alq_valor AS valor\n"
                 + "FROM alquiler a, pelicula p, socio s\n"
                 + "WHERE p.pel_id = a.pel_id\n"
                 + "AND a.soc_id = s.soc_id\n"
