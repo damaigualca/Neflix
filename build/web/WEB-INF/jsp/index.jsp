@@ -18,10 +18,10 @@
 <body>
     <%@include file="header.jsp" %>            
     <main class="page landing-page">
-        <section class="clean-block clean-hero" style="background-image: url(&quot;assets/img/neflix.jpg&quot;);color: rgba(9, 162, 255, 0.3);">
+        <section class="clean-block clean-hero" style="background-image: url(&quot;assets/img/back.jpg&quot;);color: rgba(9, 162, 255, 0.3);">
             <div class="text">
                 <h2>Neflix</h2>
-                <p>Franquicia estadounidense de video clubes, especializada en alquiler de cine y videojuegos Online!</p><button class="btn btn-outline-light btn-lg" type="button">Alquila ya!</button></div>
+                <p>Franquicia estadounidense de video clubes, especializada en alquiler de cine y videojuegos Online!</p><a href="/Neflix/admin/pelicula/alquilarPelicula.htm"><button  class="btn btn-outline-light btn-lg" type="button">Alquila ya!</button></a></div>
         </section>
         <section class="clean-block clean-info dark">
             <div class="container">
@@ -31,18 +31,18 @@
                     </div>
                 </div>
             </div>
-            <section class="clean-block about-us">
+            <section class="clean-block about-us" style="background-color: #000;  ">
                 <div class="container">
                     <div class="block-heading">
                         <h2 class="text-info">Bienvenido a Neflix</h2>
-                        <p>Disfruta de series Neflix Originals exclusivas, adem√°s de pel√≠culas y series populares.&nbsp;</p>
+                        <p>Disfruta de series Neflix Originals exclusivas, adem·s de pelÌculas y series populares.&nbsp;</p>
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-sm-6 col-lg-4">
                             <div class="card clean-card text-center"><img class="card-img-top w-100 d-block" src="assets/img/Screen%20Shot%202019-06-19%20at%208.22.51%20AM.png">
                                 <div class="card-body info">
                                     <h4 class="card-title"><strong>Ver en cualquier parte</strong></h4>
-                                    <p class="card-text">Disfruta desde la web o con la aplicaci√≥n de Prime Video en tu tel√©fono, tablet o ciertos Smart TV en hasta 3 dispositivos al mismo tiempo.<br></p>
+                                    <p class="card-text">Disfruta desde la web o con la aplicaciÛn de Prime Video en tu telÈfono, tablet o ciertos Smart TV en hasta 3 dispositivos al mismo tiempo.<br></p>
                                 </div>
                             </div>
                         </div>
@@ -50,7 +50,7 @@
                             <div class="card clean-card text-center"><img class="card-img-top w-100 d-block" src="assets/img/Screen%20Shot%202019-06-19%20at%208.22.55%20AM.png">
                                 <div class="card-body info">
                                     <h4 class="card-title">Robert Downturn</h4>
-                                    <p class="card-text">Disfruta de contenido sin conexi√≥n con la aplicaci√≥n Prime Video cuando descargues t√≠tulos en tu iPhone, iPad, tablet o dispositivo Android.<br></p>
+                                    <p class="card-text">Disfruta de contenido sin conexiÛn con la aplicaciÛn Prime Video cuando descargues tÌtulos en tu iPhone, iPad, tablet o dispositivo Android.<br></p>
                                 </div>
                             </div>
                         </div>
@@ -58,7 +58,7 @@
                             <div class="card clean-card text-center"><img class="card-img-top w-100 d-block" src="assets/img/Screen%20Shot%202019-06-19%20at%208.23.00%20AM.png">
                                 <div class="card-body info">
                                     <h4 class="card-title"><strong>Ahorro de datos</strong><br></h4>
-                                    <p class="card-text">Controla el uso de datos mientras descargas y ves videos en ciertos tel√©fonos y tablets, sin tener que preocuparte.</p>
+                                    <p class="card-text">Controla el uso de datos mientras descargas y ves videos en ciertos telÈfonos y tablets, sin tener que preocuparte.</p>
                                 </div>
                             </div>
                         </div>

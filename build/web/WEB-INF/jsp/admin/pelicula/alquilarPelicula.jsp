@@ -24,7 +24,7 @@
         <br>
         <br>
          <main class="page catalog-page">
-        <section class="clean-block clean-catalog dark">
+        <section class="clean-block clean-catalog dark" style="background-color: whitesmoke;">
             <div class="container">
                 <div class="block-heading">
                     <h2 class="text-info">Catálogo de Películas</h2>
@@ -32,8 +32,8 @@
                 </div>
             <div class="card border-info">
                 <div class="card-header bg-dark text-white">
-                    <a href="guardarPelicula.htm?array=${array}" class="btn btn-primary ">Siguiente</a> 
-                    <a  onClick="contar();" class="btn btn-primary ">Contar</a>
+                    
+                    <a  onClick="contar();" class="btn btn-primary ">Alquilar</a>
                 </div>
                  <div class="card-body">
                     <table id="table_pelicula" class="table">
@@ -84,7 +84,7 @@
                       
                         </tbody>
                     </table>
-                     <a href="guardarPelicula.htm?array=" class="btn btn-primary ">Siguiente</a> 
+                    
 
                 </div>
             </div>
