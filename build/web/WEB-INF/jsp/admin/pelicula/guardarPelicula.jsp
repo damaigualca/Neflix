@@ -39,7 +39,7 @@
                             </c:forEach>
                         </select> 
                         <label>Valor de alquiler:</label>
-                        <input id="${dato.PEL_ID}" required type="number" name="valor" class="form-control" value="${dato.PEL_COSTO}">
+                        <input id="1${dato.PEL_ID}" required type="number" name="valor" class="form-control" value="${dato.PEL_COSTO}">
                            <script type="text/javascript">
                                 array[tamano] = "1"+${dato.PEL_ID};
                                 tamano = tamano+1;

@@ -45,7 +45,7 @@
                                 <th scope="row">Formato</th>
                                 <th scope="row">Costo</th>
                                 <th scope="row">Fecha de Estreno</th>
-                                <th scope="row">Imagen</th>
+                                <th scope="row">Imagen</h>
                                            <th scope="row">Acciones</th>
                             </tr>
                         </thead>

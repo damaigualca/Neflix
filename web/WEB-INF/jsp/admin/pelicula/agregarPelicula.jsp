@@ -74,7 +74,8 @@
                         </div>
                         
                         <label>Imagen</label>
-                        <input type="file" name="imagen" class="form-control">
+                        <input type="file" id="files" name="imagen" class="form-control" multiple>
+                        <div id="fileContent"></div>
                         <br><br>
                         <input type="submit" value="Agregar" class="btn btn-success">
                         <a class="btn btn-dark" href="<c:url value="/admin/pelicula/listaPelicula.htm"/>"> Regresar</a>
